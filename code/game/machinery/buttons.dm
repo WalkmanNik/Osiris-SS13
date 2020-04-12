@@ -2,7 +2,7 @@
 	name = "button"
 	icon = 'icons/obj/machines/buttons.dmi'
 	icon_state = "launcher0"
-	desc = "A remote control switch for something."
+	desc = "Пульт дистанционного управления для чего-то."
 	var/id = null
 	var/active = 0
 	var/operating = 0

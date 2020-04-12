@@ -1,6 +1,6 @@
 /obj/machinery/antigrav
 	name = "antigrav generator"
-	desc = "It temporarily disables gravity around."
+	desc = "Временно отключает гравитацию вокруг."
 	icon_state = "GraviMobile"
 	density = 1
 	anchored = 0

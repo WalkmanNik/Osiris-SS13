@@ -2,7 +2,7 @@
 
 /obj/machinery/bioprinter
 	name = "organ bioprinter"
-	desc = "It's a machine that grows replacement organs."
+	desc = "Это машина, которая выращивает органы."
 	icon = 'icons/obj/surgery.dmi'
 
 	anchored = 1

@@ -131,26 +131,26 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
 
-	description = "You are an asteroid miner, working in resource Procurement for the local branch of Asters' Merchant Guild.<br>\
-Your primary responsibility is to head out on the Mining Barge, and dig up as much ore as you can on an asteroid. The barge contains all the facilities to process that ore too, and allows you to deliver refined materials ready for use.<br>\
+	description = "Вы астероидный Шахтер, работающий в сфере добычи ресурсов для местного отделения Торговой Гильдии Астерса.<br>\
+Ваша главная обязанность отправиться на шахтерскую баржу и выкопать столько руды на астероиде, сколько сможете. Баржа содержит все средства для переработки этой руды, а также позволяет доставлять очищенные материалы, готовые к использованию.<br>\
 <br>\
-All the stuff you dig up goes to the guild, and from then on it's the merchant's responsibility to sell it to other departments. <br>\
+Все, что вы откопаете, идет в гильдию, и с этого момента обязанность торговца продавать его другим отделам. <br>\
 <br>\
-Your second responsibility is to help out aboard ship, while waiting to reach an asteroid. Quite notably, the roaches infesting the ship make heavy use of burrows to get around. You have the tools and expertise to effectively deal with these burrows, and you should try to destroy them wherever you find them<br>\
+Ваша вторая обязанность состоит в том, чтобы помогать на борту корабля, ожидая, пока он достигнет астероида. Весьма примечательно, что тараканы наводняющие корабль, активно используют норы. У вас есть инструменты и опыт, чтобы эффективно бороться с этими норами, и вы должны попытаться уничтожить их везде, где только найдете<br>\
 <br>\
-Your third responsibility is as an unofficial security guard. The guild is a popular target for thieves, and one of the unspoken reasons for keeping rough, sturdy people like you on the payroll is to deter those thieves, and punish them with a swift beating for attempting to steal from the merchant. Try to keep the beatings nonlethal though, murder generates too much bad publicity<br>\
+Ваша третья обязанность быть неофициальным охранником. Гильдия популярная цель для воров, и одна из невысказанных причин держать грубых и крепких людей, таких как вы, состоит в том, чтобы сдерживать этих воров и наказывать их избиением за попытку украсть что-либо у торговца. Постарайтесь, чтобы побои не были смертельными, и убийство порождает много плохой рекламы<br>\
 <br>\
-Character Expectations:<br>\
-	Miners should be tough and physically strong. Unafraid to get their hands dirty.<br>\
-	You should be competent in an EVA suit and in operating heavy machinery"
+Черты персонажа:<br>\
+	Шахтеры должны быть крепкими и физически сильными. Они не боятся испачкать свои руки.<br>\
+	Вы должны быть компетентны в скафандре EVA и в управлении тяжелой техникой"
 
 
-	duties = "Dig up ores and minerals, process them into useable material.<br>\
-	Collapse burrows around the ship to help fight off the roach infestation<br>\
-	Protect the Guild wing and the merchant, from thieves and intruders."
+	duties = "Выкапывайте руды и минералы, перерабатывайте их в пригодный для использования материал.<br>\
+	Разрушайте норы вокруг корабля, чтобы помочь бороться с нашествием тараканов<br>\
+	Защищайте крыло гильдии и торговца от воров и незваных гостей."
 
-	loyalties = "	Your first loyalty is to yourself and survival. This ship is mostly just a paycheck to you<br>\
-	Your second loyalty is to the merchant, he ensures you're well paid and respected, in a universe where workers are often treated as interchangeable parts.	"
+	loyalties = "	Ваша первая верность это верность себе и выживанию. Этот корабль в просто способ заработка для вас<br>\
+	Ваша вторая верность к торговцу, он гарантирует, что вам хорошо заплатят и будут уважать, во вселенной, где рабочие часто рассматриваются как взаимозаменяемые вещи.	"
 
 	access = list(
 		access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining,
