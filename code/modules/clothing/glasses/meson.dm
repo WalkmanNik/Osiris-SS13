@@ -1,6 +1,6 @@
 /obj/item/clothing/glasses/powered/meson
 	name = "Optical Meson Scanner"
-	desc = "Used for seeing walls, floors, and stuff through anything."
+	desc = "Используется для того, чтобы видеть стены, полы и прочее сквозь что угодно."
 	icon_state = "meson"
 	item_state = "glasses"
 	vision_flags = SEE_TURFS

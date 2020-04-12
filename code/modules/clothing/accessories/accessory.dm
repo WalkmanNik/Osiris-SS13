@@ -1,6 +1,6 @@
 /obj/item/clothing/accessory
 	name = "tie"
-	desc = "A neosilk clip-on tie."
+	desc = "Галстук-клипса из неосилка."
 	icon = 'icons/inventory/accessory/icon.dmi'
 	icon_state = "bluetie"
 	item_state = ""	//no inhands
@@ -82,12 +82,12 @@
 
 /obj/item/clothing/accessory/horrible
 	name = "horrible tie"
-	desc = "A neosilk clip-on tie. This one is disgusting."
+	desc = "Галстук-клипса из неосилка. Он ужасен."
 	icon_state = "horribletie"
 
 /obj/item/clothing/accessory/stethoscope
 	name = "stethoscope"
-	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
+	desc = "Устаревший медицинский аппарат для прослушивания человеческого тела. Теперь вы выглядите как знаток своего дела."
 	icon_state = "stethoscope"
 
 /obj/item/clothing/accessory/stethoscope/attack(mob/living/carbon/human/M, mob/living/user)
@@ -153,41 +153,41 @@
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew."
+	desc = "Бронзовая медаль присуждается за выдающееся поведение. Несмотря на то, что это большая честь, это самая основная награда, которую мы предлагаем. Он часто вручается капитаном одному из членов их экипажа."
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"
-	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
+	desc = "Бронзовая медаль в форме сердца, вручаемая за жертву. Он часто присуждается посмертно или за тяжелое ранение при исполнении служебных обязанностей."
 	icon_state = "bronze_heart"
 
 /obj/item/clothing/accessory/medal/nobel_science
 	name = "nobel sciences award"
-	desc = "A bronze medal which represents significant contributions to the field of science or engineering."
+	desc = "Бронзовая медаль, которая присуждается за значительный вклад в области науки или техники."
 
 /obj/item/clothing/accessory/medal/silver
 	name = "silver medal"
-	desc = "A silver medal."
+	desc = "Серебряная медаль."
 	icon_state = "silver"
 	price_tag = 500
 
 /obj/item/clothing/accessory/medal/silver/valor
 	name = "medal of valor"
-	desc = "A silver medal awarded for acts of exceptional valor."
+	desc = "Серебряная медаль присуждаемая за исключительную доблесть."
 
 /obj/item/clothing/accessory/medal/silver/security
 	name = "robust security award"
-	desc = "An award for distinguished combat and sacrifice in defence of corporate commercial interests. Often awarded to security staff."
+	desc = "Награда за выдающиеся боевые заслуги и самопожертвование в защите корпоративных и коммерческих интересов. Часто присуждается сотрудникам Службы Безопасности."
 
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
-	desc = "A prestigious golden medal."
+	desc = "Престижная золотая медаль."
 	icon_state = "gold"
 	price_tag = 1000
 
 /obj/item/clothing/accessory/medal/gold/captain
 	name = "medal of captaincy"
-	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain, and their undisputable authority over their crew."
+	desc = "Золотая медаль вручается исключительно тем, кто повышен в звании до Капитана. Это означает кодифицированные обязанности Капитана и его неоспоримую власть над своим экипажем."
 
 /obj/item/clothing/accessory/medal/gold/heroism
 	name = "medal of exceptional heroism"
-	desc = "An extremely rare golden medal awarded only by company officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but commanders."
+	desc = "Чрезвычайно редкая золотая медаль присуждается только должностным лицам компании. Получение такой медали является высшей честью, и поэтому очень немногие достойны носить ее. Эта медаль почти никогда не вручается никому, кроме глав фракций."

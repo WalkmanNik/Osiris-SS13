@@ -1,6 +1,6 @@
 /obj/item/clothing/accessory/holster
 	name = "shoulder holster"
-	desc = "A handgun holster."
+	desc = "Кобура от пистолета."
 	icon_state = "holster"
 	slot = "utility"
 	matter = list(MATERIAL_BIOMATTER = 5)
@@ -115,12 +115,12 @@
 
 /obj/item/clothing/accessory/holster/armpit
 	name = "armpit holster"
-	desc = "A worn-out handgun holster. Perfect for concealed carry."
+	desc = "Изношенная кобура личного огнестрельного оружия. Идеально подходит для скрытой переноски."
 	icon_state = "holster"
 
 /obj/item/clothing/accessory/holster/waist
 	name = "waist holster"
-	desc = "A handgun holster. Made of expensive leather."
+	desc = "Кобура от пистолета. Сделанная из дорогой кожи."
 	icon_state = "holster"
 	overlay_state = "holster_low"
 

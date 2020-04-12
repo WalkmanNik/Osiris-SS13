@@ -6,7 +6,7 @@
 
 /obj/item/clothing/accessory/badge
 	name = "Inspector's badge"
-	desc = "A Ironhammer Security badge, made from gold and set on false leather."
+	desc = "Значок службы безопасности Железного Молота, сделанный из золота и обтянутый искусственной кожей."
 	icon_state = "badge"
 	item_state = "marshalbadge"
 	slot_flags = SLOT_BELT | SLOT_ACCESSORY_BUFFER
@@ -17,7 +17,7 @@
 
 /obj/item/clothing/accessory/badge/old
 	name = "faded badge"
-	desc = "A faded badge, backed with leather. It bears the emblem of the Forensic division."
+	desc = "Выцветший значок, обтянутый кожей. На нем изображена эмблема судебно-медицинского отдела.."
 	icon_state = "badge_round"
 
 /obj/item/clothing/accessory/badge/proc/set_name(var/new_name)
@@ -27,7 +27,7 @@
 /obj/item/clothing/accessory/badge/attack_self(mob/user as mob)
 
 	if(!stored_name)
-		to_chat(user, "You polish your badge fondly, shining up the surface.")
+		to_chat(user, "Вы нежно полируете свой значок, заставляя его поверхность сиять.")
 		set_name(user.real_name)
 		return
 
@@ -44,7 +44,7 @@
 //.Holobadges.
 /obj/item/clothing/accessory/badge/holo
 	name = "holobadge"
-	desc = "This glowing blue badge marks the holder as a member of Ironhammer Security."
+	desc = "Этот светящийся синий значок отмечает владельца как члена Службы безопасности Железный Молот."
 	icon_state = "holobadge"
 	item_state = "holobadge"
 	var/emagged //Emagging removes Sec check.
@@ -83,7 +83,7 @@
 
 /obj/item/weapon/storage/box/holobadge
 	name = "holobadge box"
-	desc = "A box claiming to contain holobadges."
+	desc = "Коробка утверждающая, что внутри голобейджики."
 	New()
 		new /obj/item/clothing/accessory/badge/holo(src)
 		new /obj/item/clothing/accessory/badge/holo(src)
@@ -97,19 +97,19 @@
 
 /obj/item/clothing/accessory/badge/warden
 	name = "Gunnery Sergeant badge"
-	desc = "A silver Ironhammer Security badge. Stamped with the words 'Sergeant.'"
+	desc = "Серебряный пропуск Железного Молота. Проштамповано с надписью 'Сержант.'"
 	icon_state = "silverbadge"
 	slot_flags = SLOT_ACCESSORY_BUFFER
 
 
 /obj/item/clothing/accessory/badge/hos
 	name = "Commander's badge"
-	desc = "An immaculately polished gold Ironhammer Security badge. Labeled 'Commander.'"
+	desc = "Безукоризненно отполированный золотой пропуск Железного Молота. С Надписью 'Командор.'"
 	icon_state = "goldbadge"
 	slot_flags = SLOT_ACCESSORY_BUFFER
 
 /obj/item/clothing/accessory/badge/marshal
 	name = "Marshal's badge"
-	desc = "A leather-backed gold badge displaying the crest of the Ironhammer Marshals."
+	desc = "Золотой значок обтянутый кожей с гербом Маршалов Железного Молота."
 	icon_state = "marshalbadge"
 	badge_string = "Ironhammer Marshal Bureau"

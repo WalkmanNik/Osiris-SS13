@@ -1,6 +1,6 @@
 /obj/item/clothing/glasses/powered/night
 	name = "Night Vision Goggles"
-	desc = "You can totally see in the dark now!"
+	desc = "Теперь вы можете видеть в темноте!"
 	icon_state = "night"
 	item_state = "glasses"
 	darkness_view = 7
@@ -17,7 +17,7 @@
 
 /obj/item/clothing/glasses/bullet_proof_ironhammer
 	name = "Night Vision Goggles"
-	desc = "You can totally see in the dark now!"
+	desc = "Теперь вы можете видеть в темноте!"
 	icon_state = "bulletproof_ironhammer_goggles"
 	darkness_view = 7
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
