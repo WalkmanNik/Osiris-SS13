@@ -23,13 +23,13 @@
 		STAT_VIG = 15,
 	)
 	outfit_type = /decl/hierarchy/outfit/job/service/bartender //Re-using this.
-	description = "As the Club Manager, you run the club aboard CEV Eris. Provide the crewmembers with drinks, food, and entertainment.<br>\
+	description = "Как Менеджер Клуба, вы управляете клубом на борту CEV Eris. Обеспечьте членов экипажа напитками, едой и развлечениями.<br>\
 	<br>\
-	Technically you take orders from no one, but the Captain and the First Officer are the ones who hired you and you should strive to please them. Your Club Workers help you run the place and make money. Pay them well!"
+	Формально вы никому не подчиняетесь, но Капитан и Стар. Пом. это те, кто наняли вас, и вы должны стараться угодить им. Работники вашего клуба помогают вам управлять этим местом и зарабатывать деньги. Платите им хорошо!"
 
-	duties = "		Run the club, provide a safe haven for food, drinks, and entertainment.<br>\
-		Make money, run deals through your place, provide entertainment, trade secrets.<br>\
-		Keep the bar safe, clean, and free of fights."
+	duties = "		Заведуйте клубом, обеспечьте безопасное хранение еды, напитков, а так же развлекайте экипаж.<br>\
+		Зарабатывайте деньги, проводите сделки через свое заведение, предоставляйте развлечения, коммерческие секреты.<br>\
+		Держите бар безопасным, чистым и свободным от драк."
 
 	loyalties = LOYALTY_CIVILIAN
 
@@ -59,16 +59,16 @@
 		STAT_VIG = 5,
 	)
 	outfit_type = /decl/hierarchy/outfit/job/service/waiter
-	description = "As a Club Worker, you work for the Club Manager. Your job is to fulfill your duties in running the Club and making sure all the customers are satisfied.<br>\
+	description = "Как Работник Клуба, вы работаете на Менеджера Клуба. Ваша задача, выполнять свои обязанности по управлению клубом и следить за тем, чтобы все клиенты были довольны.<br>\
 	<br>\
-	You can cook, clean, server, tend the bar, entertain, or even be the bouncer. You have no limits to what you can do inside the Club granted your manager requests you do it.<br>\
+	Вы можете готовить, убираться, обслуживать, ухаживать за баром, развлекать посетителей или даже быть вышибалой. У вас нет никаких ограничений на то, что вы можете делать внутри клуба, если Менеджер попросит вас сделать это.<br>\
 	<br>\
-	You are paid directly by the Club Manager, he gives you your allowance. The Club Manager only makes money if the Club is ran well, so work hard!"
+	Вам платит непосредственно Менеджер Клуба, он дает вам ваше пособие. Менеджер Клуба зарабатывает деньги только в том случае, если клуб хорошо управляется, так что работайте усердно!"
 
-	duties = "		Assist the Club Manager with running the club.<br>\
-		Serve customers. Feed customers. Entertain customers.<br>\
-		Protect the Club. Protect the Customers.<br>\
-		Make enough money to stay alive aboard CEV Eris."
+	duties = "		Помогайте Менеджеру Клуба в управлении клубом.<br>\
+		Обслуживайте клиентов. Кормите клиентов. Развлекайте клиентов.<br>\
+		Защитите клуб. Защитите клиентов.<br>\
+		Заработать достаточно денег, и остаться в живых на борту CEV Eris."
 
 	loyalties = LOYALTY_CIVILIAN
 
