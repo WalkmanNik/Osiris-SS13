@@ -13,6 +13,9 @@
 	..()
 	return QDEL_HINT_HARDDEL
 
+/mob/proc/despawn()
+	return
+
 /mob/get_fall_damage(var/turf/from, var/turf/dest)
 	return 0
 
@@ -521,8 +524,8 @@
 				if(e && H.lying)
 					if(((e.status & ORGAN_BROKEN && !(e.status & ORGAN_SPLINTED)) || e.status & ORGAN_BLEEDING) && (H.getBruteLoss() + H.getFireLoss() >= 100))
 						return 1
-						break
-		return 0
+		else
+			return 0
 
 /mob/MouseDrop(mob/M as mob)
 	..()
@@ -970,6 +973,7 @@ mob/proc/yank_out_object()
 
 		affected.implants -= selection
 		affected.embedded -= selection
+		selection.on_embed_removal(src)
 		H.shock_stage+=20
 		affected.take_damage((selection.w_class * 3), 0, 0, 1, "Embedded object extraction")
 
@@ -979,6 +983,7 @@ mob/proc/yank_out_object()
 
 	else
 		embedded -= selection
+		selection.on_embed_removal(src)
 		if(issilicon(src))
 			var/mob/living/silicon/robot/R = src
 			R.adjustBruteLoss(5)

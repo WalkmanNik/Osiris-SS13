@@ -175,8 +175,8 @@
 	..()
 
 /mob/living/simple_animal/corgi/sec
-	name = "Jonny"
-	real_name = "Jonny"	//Intended to hold the name without altering it.
+	name = "Scar"
+	real_name = "Scar"	//Intended to hold the name without altering it.
 	gender = MALE
 	desc = "It's a ironhammer corgi."
 	icon_state = "corgi_security"

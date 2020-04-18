@@ -27,7 +27,7 @@
 
 /decl/backpack_outfit/dufflebag
 	name = "Dufflebag"
-	path = /obj/item/weapon/storage/backpack/dufflebag
+	path = /obj/item/weapon/storage/backpack/duffelbag
 
 /* Code */
 /decl/backpack_outfit

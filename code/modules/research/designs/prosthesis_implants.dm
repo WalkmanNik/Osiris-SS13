@@ -36,6 +36,19 @@
 	name = "Mechanical muscles"
 	build_path = /obj/item/organ_module/muscle
 
+/datum/design/research/item/mechfab/modules/power_muscle
+	name = "Mechanical power muscle"
+	build_path = /obj/item/organ_module/power_muscle
+
+/datum/design/research/item/mechfab/modules/eyes_coordinators
+	name = "Bionic eyes coordinators"
+	build_path = /obj/item/organ_module/eyes_coordinators
+
+/datum/design/research/item/mechfab/modules/neuroimplant
+	name = "Neuroimplant"
+	build_path = /obj/item/organ_module/neuroimplant
+
+
 
 /datum/design/research/item/mechfab/modules/multitool/surgical
 	build_path = /obj/item/organ_module/active/simple/surgical

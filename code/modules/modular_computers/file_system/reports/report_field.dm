@@ -76,7 +76,7 @@ Basic field subtypes.
 		value = sanitizeSafe(given_value) || ""
 
 /datum/report_field/simple_text/ask_value(mob/user)
-	var/input = input(user, "[display_name()]:", "Form Input", get_value())
+	var/input = input(user, "[display_name()]:", "Form Input", get_value()) as null|text
 	set_value(input)
 
 //Inteded for sizable text blocks.
@@ -92,7 +92,7 @@ Basic field subtypes.
 		value = sanitizeSafe(replacetext(given_value, "\n", "\[br\]"), MAX_PAPER_MESSAGE_LEN) || ""
 
 /datum/report_field/pencode_text/ask_value(mob/user)
-	set_value(input(user, "[display_name()] (You may use HTML paper formatting tags):", "Form Input", replacetext(html_decode(value), "\[br\]", "\n")))
+	set_value(input(user, "[display_name()] (You may use HTML paper formatting tags):", "Form Input", replacetext(html_decode(value), "\[br\]", "\n")) as null|message)
 
 //Uses hh:mm format for times.
 /datum/report_field/time
@@ -196,4 +196,4 @@ Basic field subtypes.
 	value_list.Remove(given_value)
 
 /datum/report_field/array/ask_value(mob/user)
-	add_value(input(user, "Add value", ""))
+	add_value(input(user, "Add value", "") as null|text)
