@@ -99,4 +99,3 @@ obj/item/weapon/gun/energy/retro
 	safety = FALSE
 	restrict_safety = TRUE
 	twohanded = FALSE
-	
