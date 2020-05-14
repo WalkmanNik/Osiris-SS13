@@ -55,6 +55,7 @@ GLOBAL_LIST_EMPTY(ghost_trap_users)
 
 // Print a message to all ghosts with the right prefs/lack of bans.
 /datum/ghosttrap/proc/request_player(var/mob/target, var/request_string, var/respawn_type, var/request_timeout)
+	var/agree_time_out = FALSE
 	if(request_timeout)
 		request_timeouts[target] = world.time + request_timeout
 		GLOB.destroyed_event.register(target, src, /datum/ghosttrap/proc/target_destroyed)
@@ -76,7 +77,13 @@ GLOBAL_LIST_EMPTY(ghost_trap_users)
 			continue
 
 		if(O.client)
-			to_chat(O, "[request_string] <a href='?src=\ref[src];candidate=\ref[O];target=\ref[target]'>(Occupy)</a> ([ghost_follow_link(target, O)])")
+			usr = O
+			usr << 'sound/effects/magic/blind.ogg' //Play this sound to a player whenever when he's chosen to decide.
+			if(alert(O, request_string + "Do you want to become the [target.name]? Hurry up, you have 60 seconds to make choice!","Player Request","OH YES","No, I'm autist") == "OH YES")
+				if(!agree_time_out)
+					ghost_follow_link(target, O)
+	sleep(60 SECONDS)
+	agree_time_out = TRUE
 
 /datum/ghosttrap/proc/target_destroyed(var/destroyed_target)
 	request_timeouts -= destroyed_target

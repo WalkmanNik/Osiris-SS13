@@ -176,6 +176,7 @@ var/list/channel_to_radio_key = new
 	verb = say_quote(message, speaking)
 
 	message = trim_left(message)
+	message = capitalize(message)
 
 	if(!(speaking && speaking.flags&NO_STUTTER))
 

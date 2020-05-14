@@ -1,9 +1,13 @@
 // Eyes
 /datum/gear/eyes
-	display_name = "eyepatch"
+	display_name = "Eyepatch on right eye"
 	path = /obj/item/clothing/glasses/eyepatch
 	slot = slot_glasses
 	sort_category = "Очки"
+
+/datum/gear/eyes/left_eyepatch
+	display_name = "Eyepatch on left eye"
+	path =  /obj/item/clothing/glasses/eyepatch/left
 
 /datum/gear/eyes/glasses
 	display_name = "Glasses, prescription"

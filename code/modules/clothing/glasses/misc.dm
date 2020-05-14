@@ -1,9 +1,15 @@
 /obj/item/clothing/glasses/eyepatch
-	name = "eyepatch"
+	name = "Eyepatch on right eye"
 	desc = "Yarr."
 	icon_state = "eyepatch"
 	item_state = "eyepatch"
 	body_parts_covered = 0
+
+/obj/item/clothing/glasses/eyepatch/left
+	name = "Eyepatch on left eye"
+	desc = "Yarr."
+	icon_state = "l_eyepatch"
+	item_state = "l_eyepatch"
 
 /obj/item/clothing/glasses/monocle
 	name = "monocle"
