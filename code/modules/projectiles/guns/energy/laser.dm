@@ -4,6 +4,8 @@
 	icon = 'icons/obj/guns/energy/laser.dmi'
 	icon_state = "laser"
 	item_state = "laser"
+	item_charge_meter = TRUE
+	wielded_item_state = "_doble"
 	fire_sound = 'sound/weapons/Laser.ogg'
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEM_SIZE_NORMAL
@@ -99,4 +101,3 @@ obj/item/weapon/gun/energy/retro
 	safety = FALSE
 	restrict_safety = TRUE
 	twohanded = FALSE
-	
