@@ -52,7 +52,6 @@
 	var/list/abilities_in_host = list(
 		/mob/living/simple_animal/borer/proc/secrete_chemicals,
 		/mob/living/simple_animal/borer/proc/assume_control,
-		/mob/living/simple_animal/borer/proc/paralyze_victim,
 		/mob/living/simple_animal/borer/proc/read_mind,
 		/mob/living/simple_animal/borer/proc/write_mind,
 		/mob/living/simple_animal/borer/proc/release_host,
@@ -63,7 +62,8 @@
 	// (keep in mind that those have to be abilities of /mob/living/carbon, not /mob/living/simple_animal/borer)
 	var/list/abilities_in_control = list(
 		/mob/living/carbon/proc/release_control,
-		/mob/living/carbon/proc/punish_host,
+		/mob/living/carbon/proc/talk_host,
+		/mob/living/carbon/human/proc/psychic_whisper,
 		/mob/living/carbon/proc/spawn_larvae
 	)
 
@@ -120,7 +120,7 @@
 /mob/living/simple_animal/borer/Life()
 	..()
 
-	if(chemicals < max_chemicals)
+	if((chemicals < max_chemicals) && !invisibility)
 		chemicals++
 
 	if(invisibility)
@@ -128,7 +128,7 @@
 			invisible()
 			chemicals = 0
 		else
-			chemicals -= 2
+			chemicals -= 1
 
 	if(host && !stat && !(host.stat == 2))
 		// Regenerate if within a host
@@ -256,10 +256,14 @@
 	if((borer_exp >= 20) && (borer_level < 1))
 		borer_level = 1
 		produced_reagents |= list("inaprovaline", "tricordrazine", "synaptizine", "imidazoline", "hyronalin")
-		abilities_in_host |= list(/mob/living/simple_animal/borer/proc/say_host, /mob/living/simple_animal/borer/proc/whisper_host)
+		abilities_in_host |= list(/mob/living/simple_animal/borer/proc/say_host, /mob/living/simple_animal/borer/proc/whisper_host, /mob/living/simple_animal/borer/proc/commune)
+		abilities_standalone |= list(/mob/living/simple_animal/borer/proc/commune)
 		if(host && !controlling)
 			verbs += /mob/living/simple_animal/borer/proc/say_host
 			verbs += /mob/living/simple_animal/borer/proc/whisper_host
+			verbs += /mob/living/simple_animal/borer/proc/commune
+		if(!host)
+			verbs += /mob/living/simple_animal/borer/proc/commune
 		to_chat(src, SPAN_NOTICE("Congratulation! You reached Evolution Level 1, new syntesis reagents and new abilitie is now availeble."))
 		max_chemicals += (borer_level * 10)
 		max_chemicals_inhost = max_chemicals * 5
@@ -268,9 +272,11 @@
 		borer_level = 2
 		produced_reagents |= list("spaceacillin", "quickclot", "detox", "purger", "arithrazine")
 		abilities_standalone |= list(/mob/living/simple_animal/borer/proc/biograde)
+		abilities_in_control |= list(/mob/living/carbon/human/proc/commune)
 		if(!host)
 			verbs += /mob/living/simple_animal/borer/proc/biograde
-			call(src, /mob/living/simple_animal/borer/proc/biograde)()
+		if(host && controlling)
+			verbs += /mob/living/carbon/human/proc/commune
 		to_chat(src, SPAN_NOTICE("Congratulation! You reached Evolution Level 2, new syntesis reagents and new abilitie is now availeble."))
 		max_chemicals += (borer_level * 10)
 		max_chemicals_inhost = max_chemicals * 5
@@ -313,3 +319,13 @@
 	if(invisibility)
 		alpha = 255
 		invisibility = 0
+
+/mob/living/simple_animal/borer/update_sight()
+	if(stat == DEAD || eyeobj)
+		update_dead_sight()
+	else
+		if (is_ventcrawling)
+			sight |= SEE_TURFS|SEE_OBJS|BLIND
+		else
+			//sight = initial(sight)
+			see_in_dark = initial(see_in_dark)

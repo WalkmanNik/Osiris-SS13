@@ -81,7 +81,16 @@ GLOBAL_LIST_EMPTY(ghost_trap_users)
 			usr << 'sound/effects/magic/blind.ogg' //Play this sound to a player whenever when he's chosen to decide.
 			if(alert(O, request_string + "Do you want to become the [target.name]? Hurry up, you have 60 seconds to make choice!","Player Request","OH YES","No, I'm autist") == "OH YES")
 				if(!agree_time_out)
-					ghost_follow_link(target, O)
+					if(target.ckey)
+						to_chat(usr, SPAN_WARNING("Somebody already took control of [target.name]."))
+						return
+					target.ckey = usr.ckey
+					if(target.client)
+						if(target.client.UI)
+							target.client.UI.show()
+						else
+							target.client.create_UI(target.type)
+					qdel(usr)
 	sleep(60 SECONDS)
 	agree_time_out = TRUE
 

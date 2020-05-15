@@ -157,7 +157,7 @@
 		if((M.antagHUD && M.get_preference_value(/datum/client_preference/ghost_ears) == GLOB.PREF_ALL_SPEECH) || is_admin(M))
 			to_chat(M, "[text] ([ghost_follow_link(user, M)])")
 
-	log_say("[user.name]/[user.key] (REV [name]) : [message]")
+	log_say("[user.name]/[user.key] (FACTION [name]) : [message]")
 
 /datum/faction/proc/is_member(var/mob/user)
 	for(var/datum/antagonist/A in members)

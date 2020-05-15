@@ -184,7 +184,7 @@
 		if (is_ventcrawling)
 			sight |= SEE_TURFS|SEE_OBJS|BLIND
 		else
-			//sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS)
+			sight = initial(sight)
 			see_in_dark = initial(see_in_dark)
 
 /mob/living/proc/update_dead_sight()
