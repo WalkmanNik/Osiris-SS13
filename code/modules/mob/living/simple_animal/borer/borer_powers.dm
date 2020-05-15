@@ -178,10 +178,11 @@
 	// Remove the usual "host control" abilities
 	H.verbs -= abilities_in_control
 
-
+	H.verbs |= /mob/living/carbon/human/proc/commune
 	H.verbs |= /mob/living/carbon/human/proc/psychic_whisper
 	H.verbs |= /mob/living/carbon/human/proc/tackle
 	H.verbs |= /mob/living/carbon/proc/spawn_larvae
+	H.verbs |= /mob/living/carbon/proc/talk_host
 
 	if(H.client)
 		H.daemonize()
@@ -253,23 +254,41 @@
 		return
 
 	if(world.time - used_dominate < 150)
-		to_chat(src, "You cannot use that ability again so soon.")
+		to_chat(src, SPAN_WARNING("You cannot use that ability again so soon."))
+		return
+
+	if(is_ventcrawling)
+		to_chat(src, SPAN_WARNING("You cannot use that ability while in vent."))
+		return
+
+	if(chemicals < 10)
+		to_chat(src, SPAN_WARNING("You don't have enough chemicals!"))
 		return
 
 	var/list/choices = list()
-	for(var/mob/living/carbon/C in view(3, get_turf(src)))
+	for(var/mob/living/carbon/C in view(1, get_turf(src)))
 		if(C == host || C.stat == DEAD)
 			continue
 
 		choices += C
 
-	if(world.time - used_dominate < 150)
-		to_chat(src, "You cannot use that ability again so soon.")
+	if(!choices)
+		to_chat(src, SPAN_WARNING("No available creatures found in your radius."))
 		return
 
 	var/mob/living/carbon/M = input(src,"Who do you wish to dominate?") in null|choices
 
-	if(!M || !(M in view(3, get_turf(src)))) return
+	if(world.time - used_dominate < 150)
+		to_chat(src, SPAN_WARNING("You cannot use that ability again so soon."))
+		return
+
+	if(!M || !(M in view(1, get_turf(src)))) return
+
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(istype(H.wear_suit, /obj/item/clothing/suit/space))
+			to_chat(src, SPAN_WARNING("You cannot use that ability on someone, who wear a space suit."))
+			return
 
 	if(M.has_brain_worms())
 		to_chat(src, "You cannot palyze someone who is already infested!")
@@ -281,7 +300,7 @@
 	M.Weaken(duration)
 	M.SetStunned(duration)
 	M.SetParalysis(duration)
-
+	chemicals -= 10
 	used_dominate = world.time
 
 /mob/living/simple_animal/borer/proc/assume_control()
@@ -392,7 +411,6 @@
 	set name = "Read Mind"
 	set desc = "Extract information, languages and skills out of host's brain. May cause confusion and brain damage."
 
-	var/learned_exp
 
 	if(stat)
 		return
@@ -410,7 +428,6 @@
 		var/host_stat = host.stats.getStat(stat_name, pure=TRUE)
 		var/borer_stat = stats.getStat(stat_name, pure=TRUE)
 		if(host_stat > borer_stat)
-			learned_exp += (host_stat - borer_stat)
 			stats.setStat(stat_name, host_stat)
 			copied_stats += stat_name
 
@@ -418,16 +435,15 @@
 	for(var/datum/language/L in host.languages)
 		if(!(L.flags & HIVEMIND) && !can_speak(L))
 			add_language(L.name)
-			learned_exp += 5
 			copied_languages += L.name
 
 	if(host.mind)
 		host.mind.show_memory(src)
 
-	borer_add_exp(learned_exp)
 
 	var/copied_amount = length(copied_stats) + length(copied_languages)
 	if(copied_amount)
+		borer_add_exp((copied_amount*5))
 		if(length(copied_stats))
 			to_chat(src, SPAN_NOTICE("You extracted some knowledge on [english_list(copied_stats)]."))
 
@@ -605,3 +621,42 @@
 	else
 		to_chat(src, SPAN_NOTICE("You do not have enough chemicals stored to reproduce."))
 		return
+
+/mob/living/simple_animal/borer/proc/commune()
+	set category = "Abilities"
+	set name = "Commune with humans"
+	set desc = "Send a telepathic message to an unlucky recipient."
+
+	var/list/targets = list()
+	var/target = null
+	var/text = null
+
+	for(var/mob/living/carbon/H in oview())
+		if(H == host || H.stat == DEAD)
+			continue
+
+		targets += H //Fill list, prompt user with list
+	target = input("Select a creature!", "Speak to creature", null, null) as null|anything in targets
+
+	if(!target) return
+
+	text = input("What would you like to say?", "Speak to human", null, null)
+
+	text = capitalize(sanitize(text))
+
+	if(!text) return
+
+	var/mob/M = targets[target]
+
+	if(isghost(M) || M.stat == DEAD)
+		to_chat(src, "Not even you can speak to the dead.")
+		return
+
+	log_say("[key_name(src)] communed to [key_name(M)]: [text]")
+
+	to_chat(M, "\blue Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]")
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+
+		to_chat(H, SPAN_WARNING("Your nose begins to bleed..."))
+		H.drip_blood(1)
