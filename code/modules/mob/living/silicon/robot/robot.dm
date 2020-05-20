@@ -371,8 +371,8 @@
 			<b>[C.name]</b><br><table>
 			<tr><td>Грубое повреждение:</td><td>[C.brute_damage]</td></tr>
 			<tr><td>Электронное повреждение:</td><td>[C.electronics_damage]</td></tr>
-			<tr><td>Питание:</td><td>[(!C.idle_usage || C.is_powered()) ? "Да" : "Нет"]</td></tr>
-			<tr><td>Toggled:</td><td>[ C.toggled ? "Да" : "Нет"]</td>
+			<tr><td>Питание:</td><td>[(!C.idle_usage || C.is_powered()) ? "Вкл" : "Выкл"]</td></tr>
+			<tr><td>Подлючено:</td><td>[ C.toggled ? "Да" : "Нет"]</td>
 			</table><br>
 		"}
 
@@ -450,7 +450,7 @@
 	// if you have a jetpack, show the internal tank pressure
 	if (jetpack)
 		stat("Internal Atmosphere Info", jetpack.name)
-		stat("Tank Pressure", jetpack.gastank.air_contents.return_pressure())
+		stat("Давление в баке", jetpack.gastank.air_contents.return_pressure())
 
 
 // this function displays the cyborgs current cell charge in the stat panel
@@ -460,7 +460,7 @@
 		stat(null, text("Вместимость ячейки: [round(cell.maxcharge)]")) // Round just in case we somehow get crazy values
 		stat(null, text("Потребление питания: [round(used_power_this_tick)]W"))
 	else
-		stat(null, text("No Cell Inserted!"))
+		stat(null, text("Ячейка не вставлена!"))
 
 
 // update the status screen display
@@ -469,7 +469,7 @@
 	if (statpanel("Status"))
 		show_cell_power()
 		show_jetpack_pressure()
-		stat(null, text("Свет: [lights_on ? "ВКЛ" : "ВЫКЛ"]"))
+		stat(null, text("Свет: [lights_on ? "Вкл" : "Выкл"]"))
 		if(module)
 			for(var/datum/matter_synth/ms in module.synths)
 				stat("[ms.name]: [ms.energy]/[ms.max_energy_multiplied]")
@@ -501,7 +501,7 @@
 					C.brute_damage = WC.brute
 					C.electronics_damage = WC.burn
 
-				to_chat(usr, SPAN_NOTICE("You install the [I.name]."))
+				to_chat(usr, SPAN_NOTICE("Вы установили [I.name]."))
 
 				return
 
@@ -515,7 +515,7 @@
 					if (Gri.grip_item(cell, user))
 						cell.update_icon()
 						cell.add_fingerprint(user)
-						to_chat(user, "You remove \the [cell].")
+						to_chat(user, "Вы извлекли [cell].")
 						cell = null
 						cell_component.wrapped = null
 						cell_component.installed = 0
@@ -524,7 +524,7 @@
 					if (Gri.grip_item(cell_component.wrapped, user))
 						cell_component.wrapped = null
 						cell_component.installed = 0
-						to_chat(user, "You remove \the [cell_component.wrapped].")
+						to_chat(user, "Вы извлекли [cell_component.wrapped].")
 
 	var/list/usable_qualities = list(QUALITY_WELDING, QUALITY_PRYING)
 	if((opened && !cell) || (opened && cell))
@@ -558,7 +558,7 @@
 			if(opened)
 				if(cell)
 					if(I.use_tool(user, src, WORKTIME_FAST, tool_type, FAILCHANCE_NORMAL, required_stat = STAT_MEC))
-						to_chat(user, SPAN_NOTICE("You close the cover."))
+						to_chat(user, SPAN_NOTICE("Вы закрываете крышку."))
 						opened = 0
 						updateicon()
 						return
@@ -569,8 +569,8 @@
 						return
 
 					if(I.use_tool(user, src, WORKTIME_FAST, tool_type, FAILCHANCE_NORMAL, required_stat = STAT_MEC))
-						to_chat(user, SPAN_NOTICE("You jam the crowbar into the robot and begin levering [mmi]."))
-						to_chat(user, SPAN_NOTICE("You damage some parts of the chassis, but eventually manage to rip out [mmi]!"))
+						to_chat(user, SPAN_NOTICE("Вы втыкаете лом в робота и начнете поднимать рычаги [mmi]."))
+						to_chat(user, SPAN_NOTICE("Вы повредили некоторые части шасси, но в конце концов смогли вырваться [mmi]!"))
 						new /obj/item/robot_parts/robot_suit/with_limbs (loc)
 						new/obj/item/robot_parts/chest(loc)
 						qdel(src)
@@ -604,10 +604,10 @@
 
 			else
 				if(locked)
-					to_chat(user, SPAN_WARNING("The cover is locked and cannot be opened."))
+					to_chat(user, SPAN_WARNING("Крышка заблокирована и не может быть открыта."))
 				else
 					if(I.use_tool(user, src, WORKTIME_FAST, tool_type, FAILCHANCE_NORMAL, required_stat = STAT_MEC))
-						to_chat(user, SPAN_NOTICE("You open the cover."))
+						to_chat(user, SPAN_NOTICE("Вы открываете крышку."))
 						opened = 1
 						updateicon()
 						return
@@ -625,21 +625,21 @@
 					to_chat(user, SPAN_NOTICE("The wires have been [wiresexposed ? "exposed" : "unexposed"]"))
 					updateicon()
 			else
-				switch(alert(user,"What are you trying to interact with?",,"Tools","Radio"))
-					if("Tools")
+				switch(alert(user,"С чем вы пытаетесь взаимодействовать?",,"Инструменты","Приемник"))
+					if("Инструменты")
 						var/list/robotools = list()
 						for(var/obj/item/weapon/tool/robotool in src.module.modules)
 							robotools.Add(robotool)
 						if(robotools.len)
-							var/obj/item/weapon/tool/chosen_tool = input(user,"Which tool are you trying to modify?","Tool Modification","Cancel") in robotools + "Cancel"
-							if(chosen_tool == "Cancel")
+							var/obj/item/weapon/tool/chosen_tool = input(user,"Какой инструмент вы пытаетесь модицировать?","Мод. инструментов","Отмена") in robotools + "Отмена"
+							if(chosen_tool == "Отмена")
 								return
 							chosen_tool.attackby(I,user)
 						else
-							to_chat(user, SPAN_WARNING("[src] has no modifiable tools."))
-					if("Radio")
+							to_chat(user, SPAN_WARNING("[src] не имеет инструментов для модификации."))
+					if("Приемник")
 						if(!radio)
-							to_chat(user, SPAN_WARNING("Unable to locate a radio."))
+							to_chat(user, SPAN_WARNING("Невозможно найти приемник."))
 						if(I.use_tool(user, src, WORKTIME_FAST, tool_type, FAILCHANCE_NORMAL, required_stat = STAT_MEC))
 							radio.attackby(I,user)//Push it to the radio to let it handle everything
 							updateicon()
@@ -650,7 +650,7 @@
 
 	if(istype(I, /obj/item/stack/cable_coil) && (wiresexposed || isdrone(src)))
 		if (!getFireLoss())
-			to_chat(user, "Nothing to fix here!")
+			to_chat(user, "Здесь нечего чинить!")
 			return
 		var/obj/item/stack/cable_coil/coil = I
 		if (coil.use(1))
@@ -675,16 +675,16 @@
 	else if (istype(I, /obj/item/weapon/cell) && opened)	// trying to put a cell inside
 		var/datum/robot_component/C = components["power cell"]
 		if(wiresexposed)
-			to_chat(user, SPAN_WARNING("Close the panel first."))
+			to_chat(user, SPAN_WARNING("Сначала закройте панель."))
 		else if(cell)
-			to_chat(user, SPAN_WARNING("There is a power cell already installed."))
+			to_chat(user, SPAN_WARNING("Энергоячейка уже установлена."))
 		else if(!istype(I, /obj/item/weapon/cell/large))
-			to_chat(user, SPAN_WARNING("\The [I] is too small to fit here."))
+			to_chat(user, SPAN_WARNING(" [I] слишком мала чтобы поместиться здесь."))
 		else
 			user.drop_item()
 			I.loc = src
 			cell = I
-			to_chat(user, SPAN_NOTICE("You insert the power cell."))
+			to_chat(user, SPAN_NOTICE("Вы вставляете энергоячейку."))
 
 			C.installed = 1
 			C.wrapped = I
@@ -697,36 +697,36 @@
 		if(radio)//sanityyyyyy
 			radio.attackby(I,user)//GTFO, you have your own procs
 		else
-			to_chat(user, SPAN_WARNING("Unable to locate a radio."))
+			to_chat(user, SPAN_WARNING("Невозможно найти приемник."))
 
 	else if(I.GetIdCard() || length(I.GetAccess()))			// trying to unlock the interface with an ID card
 		if(emagged)//still allow them to open the cover
-			to_chat(user, SPAN_WARNING("The interface seems slightly damaged."))
+			to_chat(user, SPAN_WARNING("Интерфейс кажется слегка поврежден."))
 		if(opened)
-			to_chat(user, SPAN_WARNING("You must close the cover to swipe an ID card."))
+			to_chat(user, SPAN_WARNING("Вы должны закрыть крышку, чтобы провести ID картой."))
 		else
 			if(allowed(usr))
 				locked = !locked
-				to_chat(user, SPAN_NOTICE("You [locked ? "lock" : "unlock"] [src]'s interface."))
+				to_chat(user, SPAN_NOTICE("Вы [locked ? "заблокировали" : "разблокировали"] интерфейс [src]"))
 				updateicon()
 			else
-				to_chat(user, SPAN_WARNING("Access denied."))
+				to_chat(user, SPAN_WARNING("В доступе отказано."))
 
 	else if(istype(I, /obj/item/borg/upgrade/))
 		var/obj/item/borg/upgrade/U = I
 		if(!opened)
-			to_chat(usr, "You must access the borgs internals!")
+			to_chat(usr, "Вы должны получить доступ к внутренностям борга!")
 		else if(!src.module && U.require_module)
-			to_chat(usr, "The borg must choose a module before he can be upgraded!")
+			to_chat(usr, "Борг должен выбрать модуль, прежде чем его можно будет модернизировать!")
 		else if(U.locked)
-			to_chat(usr, "The upgrade is locked and cannot be used yet!")
+			to_chat(usr, "Обновление заблокировано и пока не может быть использовано!")
 		else
 			if(U.action(src))
-				to_chat(usr, "You apply the upgrade to [src]!")
+				to_chat(usr, "Вы применяете обновление к [src]!")
 				usr.drop_item()
 				U.loc = src
 			else
-				to_chat(usr, "Upgrade error!")
+				to_chat(usr, "Ошибка обновления!")
 
 	else if (istype(I,/obj/item/weapon/tool_upgrade)) //Upgrading is handled in _upgrades.dm
 		return
@@ -752,7 +752,7 @@
 			cell.update_icon()
 			cell.add_fingerprint(user)
 			user.put_in_active_hand(cell)
-			to_chat(user, SPAN_NOTICE("You remove \the [cell]."))
+			to_chat(user, SPAN_NOTICE("Вы извлекаете [cell]."))
 			cell = null
 			cell_component.wrapped = null
 			cell_component.installed = 0
@@ -760,7 +760,7 @@
 		else if(cell_component.installed == -1)
 			cell_component.installed = 0
 			var/obj/item/broken_device = cell_component.wrapped
-			to_chat(user, SPAN_WARNING("You remove \the [broken_device]."))
+			to_chat(user, SPAN_WARNING("Вы извлекаете [broken_device]."))
 			user.put_in_active_hand(broken_device)
 
 //Robots take half damage from basic attacks.
@@ -806,35 +806,35 @@
 
 /mob/living/silicon/robot/proc/installed_modules()
 	if(weapon_lock)
-		to_chat(src, SPAN_DANGER("Weapon lock active, unable to use modules! Count:[weaponlock_time]"))
+		to_chat(src, SPAN_DANGER("Блокировка оружия активна, невозможно использовать модули! время:[weaponlock_time]"))
 		return
 
 	if(!module)
 		pick_module()
 		return
-	var/dat = "<HEAD><TITLE>Modules</TITLE></HEAD><BODY>\n"
+	var/dat = "<HEAD><meta charset=\"UTF-8\"><TITLE>Модули</TITLE></HEAD><BODY>\n"
 	dat += {"
-	<B>Activated Modules</B>
+	<B>Активные модули</B>
 	<BR>
-	Module 1: [module_state_1 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_1]>[module_state_1]<A>" : "No Module"]<BR>
-	Module 2: [module_state_2 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_2]>[module_state_2]<A>" : "No Module"]<BR>
-	Module 3: [module_state_3 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_3]>[module_state_3]<A>" : "No Module"]<BR>
+	Модуль 1: [module_state_1 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_1]>[module_state_1]<A>" : "Нет модуля"]<BR>
+	Модуль 2: [module_state_2 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_2]>[module_state_2]<A>" : "Нет модуля"]<BR>
+	Модуль 3: [module_state_3 ? "<A HREF=?src=\ref[src];mod=\ref[module_state_3]>[module_state_3]<A>" : "Нет модуля"]<BR>
 	<BR>
-	<B>Installed Modules</B><BR><BR>"}
+	<B>Установленные модули</B><BR><BR>"}
 
 
 	for (var/obj in module.modules)
 		if (!obj)
-			dat += text("<B>Resource depleted</B><BR>")
+			dat += text("<B>Ресурс истощен</B><BR>")
 		else if(activated(obj))
 			dat += text("[obj]: <B>Activated</B><BR>")
 		else
-			dat += text("[obj]: <A HREF=?src=\ref[src];act=\ref[obj]>Activate</A><BR>")
+			dat += text("[obj]: <A HREF=?src=\ref[src];act=\ref[obj]>Использовать</A><BR>")
 	if (emagged)
 		if(activated(module.emag))
 			dat += text("[module.emag]: <B>Activated</B><BR>")
 		else
-			dat += text("[module.emag]: <A HREF=?src=\ref[src];act=\ref[module.emag]>Activate</A><BR>")
+			dat += text("[module.emag]: <A HREF=?src=\ref[src];act=\ref[module.emag]>Использовать</A><BR>")
 /*
 		if(activated(obj))
 			dat += text("[obj]: \[<B>Activated</B> | <A HREF=?src=\ref[src];deact=\ref[obj]>Deactivate</A>\]<BR>")

@@ -1,14 +1,14 @@
 var/global/list/robot_modules = list(
-	"Standard"		= /obj/item/weapon/robot_module/standard,
-	"Service" 		= /obj/item/weapon/robot_module/service,
-	"Research" 		= /obj/item/weapon/robot_module/research,
-	"Miner" 		= /obj/item/weapon/robot_module/miner,
-	"Rescue" 		= /obj/item/weapon/robot_module/medical/rescue,
-	"Medical" 		= /obj/item/weapon/robot_module/medical/general,
-	"Security" 		= /obj/item/weapon/robot_module/security/general,
-	"Engineering"	= /obj/item/weapon/robot_module/engineering/general,
-	"Construction"	= /obj/item/weapon/robot_module/engineering/construction,
-	"Custodial" 	= /obj/item/weapon/robot_module/custodial
+	"Базовый"		= /obj/item/weapon/robot_module/standard,
+	"Сервис" 		= /obj/item/weapon/robot_module/service,
+	"Исследователь" 		= /obj/item/weapon/robot_module/research,
+	"Шахтер" 		= /obj/item/weapon/robot_module/miner,
+	"Парамедик" 		= /obj/item/weapon/robot_module/medical/rescue,
+	"Врач" 		= /obj/item/weapon/robot_module/medical/general,
+	"Охрана" 		= /obj/item/weapon/robot_module/security/general,
+	"Инженер"	= /obj/item/weapon/robot_module/engineering/general,
+	"Строитель"	= /obj/item/weapon/robot_module/engineering/construction,
+	"Уборщик" 	= /obj/item/weapon/robot_module/custodial
 	//"Combat" 		= /obj/item/weapon/robot_module/combat,
 	)
 

@@ -36,21 +36,21 @@
 							 /datum/computer_file/program/chem_catalog,
 							 /datum/computer_file/program/reports)
 
-	description = "You are the head of the Moebius Medical branch, contracted by the captain to provide medical services to the crew.<br>\
-You are here to keep everyone alive and ideally, at work. You should make choices that preserve life as much as possible.<br>\
+	description = "Вы глава медицинского отделения Мебиуса, заключившего контракт с Капитаном на оказание медицинских услуг экипажу.<br>\
+Вы здесь для того, чтобы все были живы, и в идеале на работе. Вы всегда должны делать правильный выбор, который сохранит вашу жизнь.<br>\
 
-The handling of the medbay is your domain, although remember that both medical and science are branches of Moebius corp, so your colleagues have free access to your resources, and vice versa"
+Управление Медицинским Отделом это ваша обязанность, но помните, что отделы медицины, и наукы являются филиалами Мебиус корп, поэтому ваши коллеги имеют свободный доступ к вашим ресурсам, и наоборот"
 
-	duties = "Organise the doctors under your command to help save lives. Assign patients, and check on their progress periodically<br>\
-Dispatch your paramedics to distress calls, and corpse recoveries as needed<br>\
-Use department funds to purchase medical supplies and equipment as needed<br>\
-Advise the captain on medical issues that concern the crew<br>\
-Advise the crew on ethical issues<br>\
-In times of crisis, lock down the medbay to protect those within, from outside threats."
+	duties = "Организуйте врачей под своим началом, чтобы спасать жизни людей. Назначайте своих подчиненных пациентам, а также периодически проверяйте их прогресс<br>\
+Отправляйте своих Парамедиков на вызовы, и по мере необходимости убирайте трупы<br>\
+Используйте средства департамента для приобретения медицинских принадлежностей и оборудования по мере необходимости<br>\
+Консультируйте Капитана по медицинским вопросам, которые касаются экипажа<br>\
+Консультируйте экипаж по этическим вопросам<br>\
+Во время кризиса заприте Медицинский Отдел, чтобы защитить тех, кто находится внутри, от внешних угроз."
 
-	loyalties = "As a doctor, your first loyalty is to your conscience. You swore an oath to save lives and do no harm. It falls on you to be the ethical and moral core of the crew. You should speak up for prisoners, captured lifeforms, and test subjects. Nobody else will.<br>\
+	loyalties = "Как врач, во первых вы верны вашей совести. Вы дали клятву спасать жизни и не причинять вреда. Именно вам предстоит стать этическим и моральным ядром команды. Вы должны говорить за заключенных, захваченных пришельцев и испытуемых. И никто другой этого не сделает.<br>\
 
-Your second loyalty is to your career with Moebius corp, and to your coworkers in both branches of moebius. Help out your scientific colleagues, and aid in their pursuit of knowledge."
+Во вторых вы верны вашей карьере в компании \"Мебиус корп\" и вашим коллегам в обоих отделениях \"Мебиуса\". Помогайте своим научным коллегам в их стремлении к знаниям."
 
 /obj/landmark/join/start/cmo
 	name = "Moebius Biolab Officer"
@@ -89,27 +89,27 @@ Your second loyalty is to your career with Moebius corp, and to your coworkers i
 							/datum/computer_file/program/camera_monitor)
 
 
-	description = "You are a highly educated professional doctor, working a placement aboard Eris to treat the injured.<br>\
-Your tasks will primarily keep you inside medbay, the place needs to have a doctor onsite at all times to treat incoming wounded. As a general rule, you should not leave medbay if you're the only one in it, make sure someone is covering for you if you go elsewhere.<br>\
+	description = "Вы профессиональный Доктор, работающий на борту CEV Eris для лечения больных и раненых.<br>\
+Ваша задача в первую находиться внутри Медицинского Отдела, доктор должен быть на месте в любое время, чтобы лечить раненых и больных. Как правило, вы не должны покидать Медицинский Отдел, но если вы там не один, убедитесь, что кто-то сможет заменить вас, если вам вдруг понадобится пойти в другое место.<br>\
 
-As a doctor, a broad range of medical procedures fall under your potential purview. You are not expected to be able to perform all of these yourself, being a specialist is fine. <br>\
+Как Доктор, вы имеете широкий спектр медицинских процедур, что подпадает под вашу потенциальную компетенцию. От вас не ожидают, что вы сможете выполнить все это самостоятельно, так как быть специалистом во всем и сразу, невероятно сложно. <br>\
 <br>\
-	-Diagnostics: Figuring out what's wrong and how to fix it as quickly as possible. <br>\
-	-General Treatment: Administering bandages, medicine, casts and placing people in a cryocell as necessary<br>\
-	-Surgery: Opening the body under general anaesthetic to treat broken bones, organ damage and internal bleeding<br>\
-	-Virology: The study and manipulation of viruses<br>\
+	-Диагностика: выясняйте, что беспокоит ваших пациентов и как это быстрее вылечить. <br>\
+	-Общее лечение: накладывайте бинты,вводите лекарства,накладывайте гипс и помещайте людей в криокамеру по мере необходимости<br>\
+	-Хирургия: вскрывайте тело под общим наркозом для лечения переломов костей, повреждений органов и внутренних кровотечений<br>\
+	-Вирусология: изучайте и манипулируйте вирусами<br>\
 	<br>\
-Divide responsibilities among your colleagues to ensure each patient gets the treatment they need<br>\
-You also have full access to chemistry, and can utilize  it if medical is short staffed. But if there is a dedicated chemist on staff, they take priority and the lab belongs to them<br>\
+Распределите обязанности между вашими коллегами, чтобы обеспечить каждому пациенту необходимое лечение<br>\
+У вас также есть полный доступ к кабинету химии, и вы можете использовать его, если в медицинском учреждении не хватает персонала. Но если в штате есть преданный своему делу Химик, то он занимает приоритетное место, и лаборатория принадлежит ему<br>\
 <br>\
-Character Expectations:<br>\
-You are a real doctor, and as such you are expected to hold a lot of qualifications. You've most likely completed many years of medical study, and hold a PHD in one or more medical fields.<br>\
-You are expected to be knowledgeable and competent in at least basic treatment, you may have a specialty though."
+Ожидания от персонажа:<br>\
+Вы настоящий Доктор, и как таковой вы должны обладать большим количеством квалификаций. Вы, скорее всего, имеете многолетнее медицинское образование и имеете докторскую степень в одной или нескольких областях медицины.<br>\
+Вы должны быть хорошо осведомлены и компетентны, по крайней мере, в базовом лечении, хотя у вас так же может быть специальность."
 
 
-	loyalties = "As a doctor, your first loyalty is to your conscience. You swore an oath to save lives and do no harm. It falls on you to be the ethical and moral core of the crew. You should speak up for prisoners, captured lifeforms, and test subjects. Nobody else will.<br>\
+	loyalties = "Как Доктор, во первых вы верны вашей совести. Вы дали клятву спасать жизни и не причинять вреда. Именно вам предстоит стать этическим и моральным ядром команды. Вы должны говорить за заключенных, захваченных пришельцев и испытуемых. И никто другой этого не сделает.<br>\
 
-Your second loyalty is to your career with Moebius corp, and to your coworkers in both branches of moebius. Help out your scientific colleagues, and aid in their pursuit of knowledge."
+Во вторых вы верны вашей карьере в компании \"Мебиус корп\" и вашим коллегам в обоих отделениях \"Мебиуса\". Помогайте своим научным коллегам в их стремлении к знаниям."
 
 /obj/landmark/join/start/doctor
 	name = "Moebius Doctor"
@@ -147,21 +147,21 @@ Your second loyalty is to your career with Moebius corp, and to your coworkers i
 	software_on_spawn = list(/datum/computer_file/program/chem_catalog,
 							/datum/computer_file/program/scanner)
 
-	description = "The chemist is a man of medicine, as much as of science. You mix up colorful liquids to make other, equally colorful, but more useful liquids.<br>\
+	description = "Химик - это такой же человек медицины, как и науки. Вы смешиваете разноцветные жидкости, чтобы сделать другие, столь же красочные, но более полезные жидкости.<br>\
 	<br>\
-	Your primary responsibility is working as a pharmacist. Prepare medicines for use by the medical staff, so that they can capably treat a broad variety of conditions. It's good to keep a stock of bicaridine, dexalin, peridaxon, and alkysine.<br>\
+	Ваша главная обязанность работать фармацевтом. Готовьте лекарства для использования медицинским персоналом, чтобы они могли эффективно лечить самые разнообразные заболевания. И будет хорошо, если вы сохраните как можно больше бикардина, дексалина, перидаксона, и алкисина.<br>\
 	<br>\
-	Your secondary responsibility is as a chemical manufacturer for moebius generally. You may be requested to make non-medical chemicals for your colleagues in science, or even for other medical staff. Anyone within moebius should be freely and quickly provided with anything they request. Don't question why, it's above your paygrade.<br>\
+	Ваша вторая, но не менее важная обязанность быть химиком, для Мебиус Корп на постоянной основе. Так же вас могут попросить сделать, не очень таки и легальные химикаты для ваших коллег по науке или даже для других медицинских работников. Любой человек из Мебиус Корп должен быть свободно и быстро обеспечен всем, что он попросит. Не спрашивайте зачем им это, это выше вашего уровня зарплаты.<br>\
 	<br>\
-	Your third duty is to run a chemical sales outlet. You may get requests from other crewmembers to make acid, chemical grenades, smoke, cleaning products, napalm, or perhaps even just to make medicines. You are fully licensed to sell any and all chemicals to those outside moebius. Sell being the operative word here. If someone isn't an employee of Moebius corp, charge them for their chemicals.<br>\
+	Еще одна ваша обязанность, открыть торговую точку по продаже химикатов. Вы можете получить запросы от других членов экипажа, чтобы сделать кислоту, химические гранаты, дым, чистящие средства, напалм, или возможно даже просто сделать лекарства. Вы имеете лицензию на продажу любых химических веществ тем, кто не является работником Мебиус Корп. Продавать что-то здесь, это в норме вещей. Так же те, кто не является работником Мебиус Корп не имеют права получить, что-то бесплатно, так что... вы в праве требовать плату за свои труды.<br>\
 	<br>\
-	Its worth noting that you don't always have everything you need on hand. Some recipes will require external ingredients. Bicaridine, most notably, requires the roach toxin blattedin, so you should gather up roach corpses to hack apart for their chemicals. Pay assistants to do this if necessary"
+	Стоит отметить, что у вас не всегда есть все необходимое под рукой. Некоторые рецепты требуют особых реагентов. Бикардин, в частности, требует roach toxin blattedin, поэтому вы должны собирать трупы тараканов, чтобы разрезать их на части для своих химических веществ. Заплатите помощникам, чтобы они сделали это в случае необходимости"
 
-	duties = "		Mix medicines for doctors<br>\
-		Fill chemical requests for moebius staff<br>\
-		Sell chemicals and chem grenades to outsiders"
+	duties = "		Создавайте лекарства для врачей<br>\
+		Выполняйте запросы на химию от персонала Мебиуса<br>\
+		Продавайте химикаты и хим. гранаты сторонним лицам"
 
-	loyalties = "Your loyalty is to your career with Moebius corp, and to your coworkers in both branches of moebius. Help out your scientific colleagues, and aid in their pursuit of knowledge."
+	loyalties = "Вы верны вашей карьере в компании \"Мебиус Корп\" и вашим коллегам в обеих ветвях \"Мебиуса\". Помогайте своим научным коллегам и помогайте им в их стремлении к знаниям."
 
 
 /obj/landmark/join/start/chemist
@@ -238,37 +238,37 @@ Your second loyalty is to your career with Moebius corp, and to your coworkers i
 							/datum/computer_file/program/chem_catalog,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "You are a Moebius Paramedic, The hero of the hour! While doctors largely spend their time cloistered away in medbay, your job is to be out there on the frontlines. You work in the field, sometimes treating people on the spot, sometimes bringing them back to medical for specialist treatment. <br>\
+	description = "Вы парамедик Мебиуса, герой нашего времени! В то время как врачи в основном проводят свое время взаперти в медбее, ваша работа заключается в том, чтобы быть на передовой. Вы работаете в полевых условиях, иногда лечите людей на месте, иногда транспортируете их к врачу для специализированного лечения. <br>\
 
-You have significant medical training, but typically you are not a doctor, and will lack a medical degree. The actual doctors have seniority, and you should follow their orders, especially concerning treatment and diagnosis of a patient<br>\
+У вас есть довольно общирное медицинское образование, но, как правило, вы не являетесь врачом, и вам не хватает медицинской степени. Настоящие врачи имеют стаж работы, и вы должны следовать их указаниям, особенно в отношении лечения и диагностики пациента<br>\
 <br>\
-You need to be ready to run at a moment's notice, and as such you should take careful care of your gear. Pack as many medicines, treatments, rollerbeds and other equipment as you can. Be sure to bring along some kind of heavy tool for breaching sealed areas.<br>\
+Вы должны быть готовы выступать в любой момент, и поэтому вы должны тщательно заботиться о своем снаряжении. Упакуйте с собой как можно больше лекарств, методов лечения, складных кроватей и другого оборудования. Обязательно возьмите с собой какой-нибудь тяжелый инструмент для взлома закрытых участков.<br>\
 <br>\
-When the wounded are inside medbay, you will often act as a porter, transporting patients to and from various specialist treatment rooms. If your labour can save time for a doctor, get to it.<br>\
+Когда раненые находятся внутри медбея, вы часто будете выступать в роли носильщика, перевозя пациентов в различные специализированные процедурные кабинеты и обратно. Если ваши навыки могут сэкономить время работы для врача, используйте их.<br>\
 <br>\
-Once your duty to the living is dispensed, your secondary duty is to the dead. You are the designated corpse recovery staff, and you will often need to retrieve bodies from where they died, bring them back and store them in the morgue. This gives a reduction in that player's respawn time.<br>\
+Как только ваш долг перед живыми будет исполнен, ваш вторичный долг, это долг перед мертвыми. Вы назначенный персонал по уничтожению трупов, и вам часто придется убирать тела из того места, где они умерли, и приносить их в морг. Данное действие сокращает временя возрождения умершего игрока.<br>\
 <br>\
-This is the most dangerous part of your job, and recovery should only be attempted if you can reasonably do so without endangering yourself. If there are hostile creatures preventing recovery, call ironhammer to deal with them.<br>\
+Это самая опасная часть вашей работы, и уборка тел должна быть предпринята только в том случае, если вы можете разумно это сделать, не подвергая себя опасности. Если вы наткнулись на враждебных существ, препятствующим уборке, вызовите сотрудников \"Железного Молота\", чтобы они разобрались с ними.<br>\
 <br>\
-On a lighter note, since you're so fit and agile, you will often be called upon to run errands. When there's no wounded or dead, a paramedic's duties often involve fetching lunch and coffee for the rest of the medical staff.<br>\
+На более легкой ноте, поскольку вы так хороши и проворны, вам часто придется выполнять поручения. Когда нет раненых или мертвых, обязанности парамедика часто включают в себя доставку обеда и кофе для остального медицинского персонала.<br>\
 <br>\
-Character Expectations:<br>\
-Paramedic is a physically demanding job, your character must be fit and strong. No fat bodies allowed<br>\
-EVA training is expected, you should be confident in a medical Voidsuit, and optionally in driving an odysseus mech<br>\
+Ожидания от персонажа:<br>\
+Парамедик - это физически сложная работа, ваш персонаж должен быть в форме и сильным. Не допускаются жирные персонажи<br>\
+Вы должный быть обучены работе с EVA и вы должны быть уверены в своем Воидсьюте, и возможно вам придется управлять мехой типа \"Одиссей\"<br>\
 
-Remember that you are a noncombatant. Any weapons you carry should be used for breaching and rescue, not for killing. Use violence only as a last resort to defend yourself or your patient"
+Помните, вы не боец. Любое оружие, которое вы носите, должно использоваться для взлома или спасения, а не для убийства. Используйте насилие только в качестве крайней меры, чтобы защитить себя или своего пациента"
 
-	duties = "	Respond to distress calls, extract wounded people from dangerous situations, stabilize them at the scene, and take them to medbay for farther treatment as necessary<br>\
-	Watch the crew monitor for signs of injuries or deaths and respond accordingly.<br>\
-	Tour around departments checking up on the health of the crew. Administer first aid on scene as required<br>\
-	During quieter times, retrieve the corpses of the dead from around the ship<br>\
-	Run errands for the medbay staff, act as their hands outside of the medbay"
+	duties = "	Реагируйте на вызовы о помощи, спасайте раненых из опасных ситуаций, стабилизируйте их на месте происшествия и доставляйте в медпункт для дальнейшего лечения по мере необходимости<br>\
+	Наблюдайте за монитором экипажа на предмет признаков травм или смерти и реагируйте соответствующим образом.<br>\
+	Пробегайтесь по отделам, проверяйте состояния экипажа. При необходимости окажите первую помощь на месте происшествия<br>\
+	В более спокойное время убирайте трупы мертвых со всего корабля<br>\
+	Выполняйте поручения для сотрудников медпункта, действуйте как его руки за пределами медпункта"
 
-	loyalties = "	As a medical specialist, your first loyalty is to save lives, you swore an oath to do no harm. When in any dangerous situation, do your best to ensure as many as possible come out of it alive. A martyr complex is not uncommon in paramedics<br>\
+	loyalties = "	Как медицинский специалист, во первых вы верны спасению жизней, вы поклялись не причинять вреда. Когда вы оказываетесь в какой-либо опасной ситуации, сделайте все возможное, чтобы как можно больше людей вышли из нее живыми. Комплекс мученика не редкость среди парамедиков<br>\
 	<br>\
-	Your second loyalty is to your immediate superior, the Moebius Biolab Officer. Follow their instructions and policies.<br>\
+	Во вторых вы верны вашему непосредственному начальнику, Заведующему Биолабораторией. Следуйте его инструкциям и правилам.<br>\
 	<br>\
-	Your third loyalty is to your fellow colleagues in Moebius, especially those in Moebius medical. You are the lowest ranked personnel in the medbay, and you take orders from everyone else working there."
+	В третьих вы верны вашим коллегам в Мебиусе, особенно те, кто работает в \"Мебиус Медикал\". Вы самый низкоранговый персонал в медпункте, и вы подчиняетесь приказам от всех остальных, кто там работает."
 
 /obj/landmark/join/start/paramedic
 	name = "Moebius Paramedic"

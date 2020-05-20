@@ -39,15 +39,15 @@
 							/datum/computer_file/program/chem_catalog,
 							/datum/computer_file/program/reports)
 
-	description = "You are the head of the moebius research branch, tasked with directing shipboard research to new and profitable discoveries."
+	description = "Вы возглавляете исследовательский отдел Мебиуса, которому поручено направлять исследования на борту корабля к новым и прибыльным открытиям."
 
-	duties = "Direct the scientists under your command, ensure they work efficiently towards the bettering of all mankind.<br>\
-Use department funds to purchase scientific curios, artefacts, and anything of interesting research value. As well as any equipment and supplies that would be useful for these ends<br>\
-Organise away missions to gather artefacts and research interesting environments. You have the right to request support from other factions as required"
+	duties = "Управляйте учеными под вашим началом, убедитесь, что они эффективно работают на благо всего человечества.<br>\
+Используйте средства департамента для приобретения научных диковинок, артефактов и всего, что представляет интерес для исследований. А также любое оборудование и расходные материалы, которые были бы полезны для этих целей<br>\
+Организовывайте выездные миссии для сбора артефактов и исследования интересных сред. Вы имеете право запрашивать поддержку у других фракций по мере необходимости"
 
-	loyalties = "As a scientist, your first loyalty is to knowledge, the ultimate good in the universe. Learning and developing new technologies is the greatest goal humanity can pursue, and no sacrifice is too great to achieve that end. Even the lives of others or yourself.<br>\
+	loyalties = "Как ученый, во первых вы верны своим знаниям, высшему благу во Вселенной. Изучение и развитие новых технологий это величайшая цель, которую может преследовать человечество, и никакие жертвы не могут быть слишком велики для достижения этой цели. Даже жизни других людей или вас самих.<br>\
 <br>\
-Your second loyalty is to moebius corp. In order to ensure it can continue its mission of research, it must remain profitable. Ensure its interests are farthered, and take care of your colleagues in both research and medical wings"
+Во вторых вы верны компании \"Мебиус Корп\". Для того чтобы она могла продолжать свою исследовательскую миссию, она должна оставаться прибыльной. Позаботьтесь о том, чтобы их интересы были поставлены куда выше остальных, и позаботьтесь о своих коллегах как в научно-исследовательском, так и в медицинском отделе"
 
 /obj/landmark/join/start/rd
 	name = "Moebius Expedition Overseer"
@@ -86,27 +86,27 @@ Your second loyalty is to moebius corp. In order to ensure it can continue its m
 		STAT_BIO = 20,
 	)
 
-	description = "You are a scientist, standing at the frontier of human advancement. Here representing Moebius corp, to find new research opportunities in deep space. The science wing is located in the second section, starboard side, opposite medical, and your medical colleagues should be fast friends. The medical wing is part of Moebius too, and so you fully share access with each other, and are free to use each others' supplies.<br>\
+	description = "Вы ученый, стоящий на пороге развития человечества. Здесь мы представляем компанию \"Мебиус Корп\", чтобы найти новые возможности для исследований в глубоком космосе. Научный отдел находится во второй секции, по правому борту, напротив медицинского, и ваши коллеги-медики должны быть вашими друзьями. Медицинский отдел также является частью Мебиуса, и поэтому вы полностью разделяете доступ друг к другу и можете свободно использовать припасы друг друга.<br>\
 <br>\
-As a scientist, your primary purpose is research, testing, and the advancement of knowledge. You can justify almost anything if its done for the purpose of science, and people have no reason to be suspicious if you stomp around wearing strange devices and carrying stranger weapons still. You should craft, lathe and print anything you can, toy around with it, and figure out how it works in detail. Deeply explore everything you can.<br>\
+Как ученый, ваша главная цель, это исследования, тестирование и продвижение знаний. Вы можете оправдать почти все, что угодно, если это сделано для науки, и у людей нет причин вас подозревать, если вы хоите вокруг, носите странные устройства и носите странное оружие. Вы должны создавать необычные вещи, изучать их, испытывать. Погрузитесь с головой в исследования настолько глубоко, насколько возможно.<br>\
 <br>\
-There are a few specialist branches within the research wing that you may delve deeper into:<br>\
+В исследовательском отделе есть несколько специализированных отраслей, в которые вы можете углубиться:<br>\
 	<br>\
-	R&D: The manufacture and testing of high tech weapons and devices. This branch shares a lab with robotics, and often works closely together to produce vast machines.<br>\
-	Xenoflora: A lab dedicated to experimenting and modifying plant DNA, creating interesting mutated plants that may help the crew<br>\
-	Xenobiology: A wing full of cells, for the study of alien life forms. Primarily slimes<br>\
-	Xenoarchaeology: A facility for analysing artefacts and finds brought back from expeditions.<br>\
+	R&D: Производство и испытания высокотехнологичного оружия и приборов. Эта ветвь делит лабораторию с робототехникой, и часто работает в близи друг друга, для того чтобы производить более обширные машины.<br>\
+	Ксенофлора: Лаборатория, посвященная экспериментам и модификации ДНК растений, созданию интересных мутировавших растений, которые могут помочь экипажу<br>\
+	Ксенобиология: Отдел, полный био. клеток, для изучения чужеродных форм жизни. В первую очередь слаймов<br>\
+	Ксеноархеология: Объект для анализа артефактов и находок, привезенных из экспедиций.<br>\
 	<br>\
-	The Vasily Dokuchaev is the Expedition shuttle, and is intended for going on adventures down to strange sites, and recovering items of value. <br>\
+	\"Василий Докучаев\" - это экспедиционный шаттл, предназначенный для путешествий по незнакомым местам и поиска ценных предметов. <br>\
 	<br>\
-	<br>\[Note: Research content on Eris is still in its infancy, and is mostly just baystation content at the moment. We have major plans for redesigning it in the future\]"
+	<br>\[Примечание: Исследовательский контент на CEV Eris все еще находится в зачаточном состоянии, и в настоящее время это в основном просто контент baystation. У нас есть серьезные планы по его перепроектированию в будущем\]"
 
-	duties = "	Create unusual things and experiment with them<br>\
-	Explore, learn and adventure, do anything to advance the cause of knowledge"
+	duties = "	Создавайте необычные вещи и экспериментируйте с ними<br>\
+	Исследуйте, учитесь и совершайте походы, делайте все, чтобы продвигать дело познания"
 
-	loyalties = "As a scientist, your first loyalty is to knowledge, the ultimate good in the universe. Learning and developing new technologies is the greatest goal humanity can pursue, and no sacrifice is too great to achieve that end. Even the lives of others or yourself.<br>\
-
-Your second loyalty is to moebius corp. In order to ensure it can continue its mission of research, it must remain profitable. Ensure its interests are farthered, and take care of your colleagues in both research and medical wings"
+	loyalties = "Как ученый, во первых вы верны своим знаниям, высшему благу во Вселенной. Изучение и развитие новых технологий это величайшая цель, которую может преследовать человечество, и никакие жертвы не могут быть слишком велики для достижения этой цели. Даже жизни других людей или вас самих.<br>\
+<br>\
+Во вторых вы верны компании \"Мебиус Корп\". Для того чтобы она могла продолжать свою исследовательскую миссию, она должна оставаться прибыльной. Позаботьтесь о том, чтобы их интересы были поставлены куда выше остальных, и позаботьтесь о своих коллегах как в научно-исследовательском, так и в медицинском отделе"
 
 
 /obj/landmark/join/start/scientist
@@ -145,21 +145,21 @@ Your second loyalty is to moebius corp. In order to ensure it can continue its m
 
 
 
-	description = "As a roboticist, you are probably the busiest person in the research wing. For it is the only area of the department that focuses on providing services to others.<br>\
+	description = "Как робототехник, вы самый занятой человек в исследовательском отделе. Ибо это единственная сфера деятельности отдела, которая сосредоточена на предоставлении услуг другим людям.<br>\
 <br>\
-You have a broad range of tools and machinery at your disposal, and a similarly broad range of responsibilities. You will also have a constant stream of visitors, and rarely a moment to yourself<br>\
+В вашем распоряжении имеется широкий спектр инструментов и механизмов, а также столь же широкий список обязанностей. Кроме того, у вас будет постоянный поток посетителей, и вы сможете побыть наедине с собой крайне редко<br>\
 <br>\
-The duties of robotics are many, and the lab often benefits from having multiple staff.<br>\
-You must maintain, tend to, and upgrade the fleet of synthetics that help keep the ship running. Farther to that, the duty of constructing new robots falls to you too. With the aid of your fabricators, you may turn a pile of sheet metal and wires into sentient life. The robots of the ship are operated by moebius, and its not unknown for roboticists to develop a parental attachment to them.<br>\
+Обязанности робототехника многочисленны, и лаборатория часто выигрывает от наличия нескольких сотрудников этой профессии.<br>\
+Вы должны поддерживать, заботиться и модернизировать склад синтетических материалов, которые помогают поддерживать корабль в рабочем состоянии. Кроме того, на вас также ложится обязанность создавать новых роботов. С помощью ваших фабрикаторов вы можете превратить груду листового металла и проводов в разумную жизнь. Роботы корабля управляются Мебиусом, и робототехники часто привязываются к своим детищам.<br>\
 <br>\
-In addition, your department contains the manufacturing facilities for prosthetic limbs and enhancements. It typically also falls to you to install them too, and thus it is common for biomechanical engineers to work in the robotics lab. This may or may not be in your character's skillset. If surgery isn't your specialty, you may defer the implementation to your colleagues over in Moebius Medical instead, and simply supply the parts for them to install.<br>\
+Кроме того, ваш отдел располагает производственными мощностями для протезирования конечностей и их усовершенствования. Как правило, вам также приходится устанавливать их, и поэтому обычно инженеры-биомеханики работают в лаборатории робототехники. Это может быть или не быть в наборе навыков вашего персонажа. Если хирургия не является вашей специальностью, вы можете передать эту обязанность вашим коллегам в Мебиус Медикал, и просто поставить детали для установки.<br>\
 <br>\
-Lastly, though they're not commonly used, you have the facilities to construct massive and powerful mechanised vehicles. These have powerful capabilities in mining and rescue, as well as obvious military applications"
+Наконец, хотя они обычно не используются, у вас есть средства для создания массивных и мощных механизированных транспортных средств. Они обладают мощными возможностями в области добычи полезных ископаемых и спасательных работ, а также очевидным военным применением"
 
-	duties = "	Repair, maintain and upgrade robots aboard Eris<br>\
-	Maintain and implant new bionics in crewmembers<br>\
-	Advertise bionics for sale and run a commercial cybernetic clinic<br>\
-	Construct large mechas for specialised use in departments"
+	duties = "	Ремонтируйте, совершайте техническое обслуживание и модернизируйте роботов на борту CEV Eris<br>\
+	Поддерживайте и внедряйте новую бионику членам экипажа<br>\
+	Рекламируйте бионику для продажи, запускайте рекламу кибернетической клиники для продажи и выполнения заказов<br>\
+	Стройте больших Мехов для специализированного использования в отделах"
 
 /obj/landmark/join/start/roboticist
 	name = "Moebius Roboticist"

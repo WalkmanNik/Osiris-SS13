@@ -25,26 +25,26 @@
 		STAT_MEC = 15,
 		STAT_VIG = 10
 	)
-	description = "You are the head of the local branch of Asters Merchant Guild, and eris' guild representative<br>\
-A staunch entrepreneur, you are motivated by profit, for the guild and especially for yourself. You are here firstly to make as much money as you can, and secondly to keep the crew supplied. You can order things at cargo using the local guild funds, these will not magically replenish so you will run out of money quickly if you don't charge. Take payments by card or cash, and deposit them into the guild account to enable more purchases.<br>\
+	description = "Вы глава местного отделения Торговой Гильдии Астры и торговый представитель CEV Eris<br>\
+Будучи убежденным предпринимателем, вы мотивируетесь прибылью, для гильдии и особенно для вас. Вы здесь, во-первых, чтобы заработать как можно больше денег, а во-вторых, чтобы обеспечить экипаж. Вы можете заказать вещи в cargo, используя средства местной гильдии, они не будут волшебным образом пополняться, поэтому у вас быстро закончатся деньги, если вы не будете взимать плату. Принимайте платежи картой или наличными и вносите их на счет гильдии, чтобы сделать больше покупок.<br>\
 <br>\
-The guild also operates all the vendors on the ship, every credit paid into them goes to your guild account. Naturally operating is a two way street, you are expected, when necessary, to refill those vendors. Or send a technician to do it<br>\
+Гильдия также управляет всеми торговцами на корабле, каждый кредит, выплаченный им, идет на счет вашей гильдии. Естественно, что торговля это дорога с двусторонним движением, и вы должны, когда это необходимо, пополнять запасы у поставщиков. Или послать Техника, чтобы он сделал это<br>\
 <br>\
-You do not recieve a salary, but the local guild funds are yours to use. You may pay yourself as much as you like from that account, take the funds and use them for any purpose.  Bribery is a good one, you can get people to do a lot of things if you flash some cash, and its a good idea to keep a few thousand credits on hand in-cash to bribe your way through potentially difficult situations.<br>\
+Вы не получаете зарплату, но местные гильдейские фонды принадлежат вам. Вы можете платить себе сколько угодно с этого счета, брать деньги и использовать их для любых целей. Взяточничество это хорошо, вы можете заставить людей делать много вещей, если вы блеснете наличными, и это хорошая идея, чтобы держать несколько тысяч кредитов на руках наличкой, чтобы подкупить вас в потенциально трудных ситуациях.<br>\
 <br>\
-Things to bear in mind:<br>\
-	-Nobody has a right to free stuff. You are well within your rights to charge for anything you distribute, and you won't make a penny if you don't.<br>\
-	-Eris has few laws on contraband. If someone wants something and they can afford it, you get it for them. Don't try to play moral guardian and don't ask questions. You are not responsible for whatever they do with your products.<br>\
-	-Loyalty is a priceless resource, yet cheap to maintain. Don't screw over the miners and technicians working under you. <br>\
-	-Charity is a weapon. Used correctly, it can do wonders for your public image.  A few gifts spread around makes for good returning customers"
+Что вам нужно иметь в виду:<br>\
+	-Никто не имеет права на бесплатный товар. Вы имеете полное право взимать плату за все, что вы распространяете, и вы не заработаете ни пенни, если этого не сделаете.<br>\
+	-На борту CEV Eris  мало законов о контрабанде. Если кому-то что-то нужно и он может себе это позволить, вы добудете это для него. Не пытайтесь играть роль морального стража и не задавайте вопросов. Вы не несете ответственности за то, что они делают с вашими продуктами.<br>\
+	-Верность это бесценный ресурс, но дешевый для поддержания. Не обманывайте Шахтеров и Техников, работающих под вашим началом. <br>\
+	- Благотворительность это оружие. При правильном использовании оно может творить чудеса для Вашего общественного имиджа. Несколько подарков разбросанных вокруг сделают приятно возвращающимся клиентам"
 
-	duties = "Keep the crew supplied with anything they might need, at a healthy profit to you of course<br>\
-Buy up valueable items from scavengers, and make a profit reselling them<br>\
-Deploy your mining staff to harvest matter and materials<br>\
-Counsel the captain on directing the ship towards profitable opportunities"
+	duties = "Держите экипаж снабженным всем, что им может понадобиться, с хорошей прибылью для вас, конечно же<br>\
+Скупайте ценные вещи у Мусорщиков и получайте прибыль, перепродавая их<br>\
+Используйте свой горнодобывающий Персонал для сбора материала и минералов<br>\
+Советуйте Капитану куда направлять корабль, а главное к выгоде"
 
-	loyalties = "As a merchant, your first loyalty is to money. You should be unscrupulous, willing to sell anything to anyone if they can pay your prices. Direct the ship towards profitable endeavours, and press the captain to make choices that will be financially lucrative<br>\
-Your second loyalty is to the guild. Ensure it retains good relations with privateers like the captain of Eris, and don't embarass it. This means limiting your price gouging to only moderate levels. If you make an enemy of everyone, it may prove a costly mistake"
+	loyalties = "Как Торговец, во первых вы верны деньгам. Вы должны быть беспринципным, готовым продать что угодно и кому угодно, если только этот кто-то может заплатить вам. Направляйте Корабль к прибыльным начинаниям и заставьте Капитана сделать выбор, который будет финансово выгоден<br>\
+Во вторых вы верны гильдии. Обеспечьте ей хорошие взаимоотношения с Капитаном \"CEV Eris\" и не ставьте его в неловкое положение. Это означает ограничение вашего ценового раздолбайства только до умеренных уровней. Если вы поссоритесь со всеми, это может оказаться дорогостоящей ошибкой"
 
 	software_on_spawn = list(///datum/computer_file/program/supply,
 							 ///datum/computer_file/program/deck_management,

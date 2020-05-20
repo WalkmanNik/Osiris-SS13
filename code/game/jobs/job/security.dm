@@ -35,22 +35,22 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
-	description = "You are the commander of the local regiment of the Ironhammer Mercenary company, contracted to protect and serve aboard the CEV Eris. Ironhammer serves as both an internal security force, and as a guard for expeditions outwith the ship.<br>\
+	description = "Вы командор местного полка наемной роты Железного Молота, нанятого для защиты и службы на борту \"CEV Eris\". Железный Молот служит одновременно и внутренней охраной, и охраной экспедиций вне корабля.<br>\
 	<br>\
-	Your goal is to keep everyone aboard the ship as safe as possible, and to eliminate any threats to safety.<br>\
-	The Gunnery Sergeant is your second in command, and any of your duties can be delegated to him at your discretion"
+	Ваша главная цель состоит в том, чтобы держать всех на борту корабля в максимально возможной безопасности и устранять любые угрозы.<br>\
+	Командор-сержант является вашим заместителем, и любые ваши обязанности могут быть переданы ему по вашему усмотрению"
 
-	duties = "		Coordinate operatives in the field, assigning them to threats and distress calls as needed.<br>\
-		Allocate department funds for necessary supplies, equipment, armor, weapons, upgrades, etc. Spend your money as required to ensure your troops are at peak combat performance<br>\
-		Plan assaults on entrenched threats, ensure each operative knows their roles and carries them out precisely.<br>\
-		Oversee performance of the operatives under your command, and punish any that are insubordinate or incompetent<br>\
-		Advise the captain on threats to ship security, and counsel him towards choices that will minimise exposure to threats."
+	duties = "		Координируйте действия оперативников на местах, отправляя их по мере необходимости на сигналы бедствия.<br>\
+		Выделяйте отделу средства на необходимые расходные материалы, снаряжение, броню, вооружение, модернизацию и т.д. Тратьте свои деньги по мере необходимости, чтобы ваши войска были на пике боевой эффективности<br>\
+		Планируйте нападения на укоренившиеся угрозы, убедитесь, что каждый оперативник знает свою роль и следует ей.<br>\
+		Наблюдайте за работой оперативников, находящихся под вашим командованием, и наказывайте всех, кто нарушил субординацию или некомпетентен<br>\
+		Консультируйте капитана относительно угроз безопасности судна и посоветуйте ему сделать выбор, который позволит свести к минимуму воздействие угроз."
 
-	loyalties = "		As commander, your first loyalty is to the safety of the troops under your command. They are elite professional soldiers, not cannon fodder. Do not allow them to be sent on suicide missions. Any killings of your men should be repaid in blood<br>\
+	loyalties = "		Во первых как командор вы верны безопасности войск, находящихся под вашим командованием. Это элитные профессиональные солдаты, а не пушечное мясо. Не позволяйте им отправляться на самоубийственные миссии. Любые убийства ваших людей должны быть оплачены кровью<br>\
 		<br>\
-		Your second loyalty is to the name and reputation of the ironhammer company. You are often the captain's primary tool in keeping order and you must pride yourself on ensuring commands are carried out, threats extinguished and safety preserved. You may need to carry out unsavory orders like executions, and must balance your professional pride versus your conscience.<br>\
+		Во вторых вы верны имени и репутации компании \"Железный Молот\". Вы часто являетесь главным инструментом капитана в поддержании порядка, и вы должны гордиться тем, что выполняете команды, устраняете угрозы и сохраняете безопасность. Возможно, вам придется выполнять сомнительные приказы, такие как казни, и вы должны уравновесить свою профессиональную гордость и свою совесть.<br>\
 		<br>\
-		Your third loyalty is to the crew. As the strongest military force on the ship, any mutiny attempt is likely at your mercy, and if unjustified, it will fall to you to put it down. If the captain has gone mad and a mutiny is justified, your support will be the difference between a peaceful arrest and a bloody civil war in the halls. Without your guns, an insane captain will usually be forced to surrender."
+		В третьих вы верны экипажу. Как самая сильная военная сила на корабле, любая попытка мятежа, скорее всего, находится в вашей власти, и если она будет неоправданной, то вам придется подавить ее. Если капитан сошел с ума и мятеж оправдан, ваша поддержка будет решающей, и сделать выбор между мирным арестом и кровавой гражданской войной в коридорах порой очень непросто. Без вашей поддержки безумный капитан скорее всего будет вынужден сдаться."
 
 /obj/landmark/join/start/ihc
 	name = "Ironhammer Commander"
@@ -90,19 +90,19 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "You are the Second-in-Command of the local Ironhammer regiment, and the defacto leader if the commander isn't around. <br>\
-	Within ironhammer you largely hold a desk job, your duties will rarely take you outside of the Ironhammer wing, and you are not expected to interact with civilians. You have enough to deal with as is, and are probably the hardest working member of Ironhammer.<br>\
+	description = "Вы заместитель командора местного полка Железного Молота, и фактический его лидер, если командора нет поблизости. <br>\
+	В Железном Молоте вы в основном занимаетесь канцелярской работой, ваши обязанности редко выводят вас за пределы отдела Железного Молота, и вы не должны взаимодействовать с гражданскими лицами. У вас и так достаточно забот, и вы, вероятно, самый трудолюбивый сотрудник этого отдела.<br>\
 	<br>\
-	You have several core duties:<br>\
-		1. As second in command, any of the commander's duties may be delegated to you, if they decide to do so. This means that at any time, you may be expected to handle funding, paperwork, disciplinary matters, planning combat tactics, or even carrying out executions. If there's no commander, these duties fall naturally to you. If there is a commander on site though, you shouldn't make these kind of decisions without consulting them.<br>\
+	У вас есть несколько основных обязанностей:<br>\
+		1. Как заместитель командора, любая из обязанностей командора может быть передан вам, если он решит так сделать. Это означает, что в любой момент от вас могут ожидать, что вы будете заниматься финансированием, бумажной работой, дисциплинарными вопросами, планированием тактики боя или даже проведением казней. Если командора нет, эти обязанности естественным образом ложатся на вас. Однако, если командор на месте, вы не должны принимать такого рода решения, не посоветовавшись с ним.<br>\
 		<br>\
-		2. You serve as the ironhammer quartermaster. And as such, it is your job to maintain the armoury, and stocks of other equipment. You should keep track of its contents, and who has what. Make sure weapons and equipment are returned at the end of a shift, and procure new armaments from the guild or from scavengers as necessary to keep supplies up and respond to new threat	s.<br>\
+		2. Вы служите квартирмейстером Железного Молота. И как таковой, это ваша работа, а именно поддерживать комплект арсенала и запасы другого оборудования. Вы должны следить за его содержанием, и тем кто что из сотрудников имеет в данный момент. Убедитесь, что оружие и оборудование возвращаются в конце смены на место, и закупите новое вооружение у гильдии или у мусорщиков, если это необходимо, чтобы поддерживать поставки и реагировать на новые угрозы.<br>\
 		<br>\
-		3. You are the defacto warden, and if there are any prisoners being kept in the Ironhammer brig, it is your responsibility to ensure they are fed, treated appropriately with regard to their legal rights, and ensure they have access to medical care. If necessary you may need to suppress riots or escape attempts within the brig too.<br>\
+		3. Вы так же являетесь начальником тюрьмы, и если в тюрьме содержатся какие-либо заключенные, то вы несете ответственность за то, чтобы их кормили, обращались с ними надлежащим образом в соответствии с их законными правами и обеспечивали им доступ к медицинской помощи. При необходимости вам также может понадобиться подавить беспорядки или попытки побега в пределах гауптвахты.<br>\
 		<br>\
-		4. In times of peace, prepare for war. To this end, you are also the onsite military instructor. If the ship is in a lull and there are no outstanding threats, you should take the initiative to order training drills. Allow junior operatives to train and learn with less conventional weapons and tactics, give lessons on aiming, trigger discipline, hand to hand combat. Conduct drills on threat response, squad tactics, and EVA manoeuvres.<br>\ "
+		4. В мирное время готовьтесь к боевым действия. С этой целью вы также являетесь местным военным инструктором. Если корабль находится в затишье и нет никаких выдающихся угроз, вы должны взять на себя инициативу и назначить учебные задания. Позвольте младшим оперативникам тренироваться и учиться с меньшим количеством обычного оружия и тактики, давать уроки прицеливания, спусковой дисциплины, рукопашного боя. Проводите учения по реагированию на угрозы, тактике отделения и маневрам в EVA.<br>\ "
 
-	loyalties = "You're a military man through and through. As such, your first loyalty is to the Commander, and thusly to the chain of command"
+	loyalties = "Вы военный человек до мозга костей. Таким образом, во первых вы верны командору, а следовательно, и всей цепочке командования"
 
 /obj/landmark/join/start/gunserg
 	name = "Ironhammer Gunnery Sergeant"
@@ -143,21 +143,21 @@
 							 /datum/computer_file/program/audio,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "You are the ship's detective, here to take care of the cases that aren't always what they seem, and suspects that aren't always caught red handed or ready to confess.<br>\
-	The inspector's job is to interrogate suspects, gather witness statements,  harvest evidence and reach a conclusion about the nature and culprit of a crime.<br>\
+	description = "Вы инспектор, который здесь для того, чтобы заниматься делами, которые не всегда являются тем, чем кажутся, и подозреваемыми, которые не всегда пойманы с поличным или готовы признаться.<br>\
+	Работа инспектора заключается в том, чтобы допрашивать подозреваемых, собирать показания свидетелей, собирать доказательства и делать выводы о характере и виновнике преступления.<br>\
 	<br>\
-	You are a higher ranking ironhammer officer, and you can give commands to operatives.  But this doesn't mean you should be commanding assaults. You're not any kind of tactical commander<br>\
+	Вы офицер Железного Молота более высокого ранга, и вы можете давать команды оперативникам.  Но это не значит, что вы должны командовать штурмами. Вы же не командор<br>\
 	<br>\
-	When there are no outstanding cases, your job is to go look for them. Mingle with civilians, interact and converse, sniff out leads about potential criminal activity. The ironhammer budget can often include stipends to pay informers for any useful info"
+	Когда нет никаких выдающихся случаев, ваша задача пойти и найти их. Общайтесь с гражданскими лицами, вынюхивайте наводки о потенциальной преступной деятельности. Бюджет отдела часто может включать стипендии для оплаты информаторов за любую полезную информацию"
 
-	duties = "		Interview suspects and witnesses after a crime. Record important details of their statements, and look for inconsistencies.<br>\
-		Gather evidence and bring it back for processing<br>\
-		Send out operatives to bring suspects in for questioning<br>\
-		Interact with civilians and be on the lookout for criminal activity"
+	duties = "		Допрашивайте подозреваемых и свидетелей после совершения преступления. Записывайте важные детали высказываний подозреваемого и ищите несоответствия.<br>\
+		Собирайте доказательства и используйте их для обработки преступления<br>\
+		Отправляйте оперативников, чтобы они доставили подозреваемых на допрос<br>\
+		Взаимодействуйте с гражданскими лицами и будьте настороже в поисках преступной деятельности"
 
-	loyalties = "		As a detective, your loyalty is firstly, to the truth. Seek to uncover the true events of any crime.<br>\
+	loyalties = "		Во первых как детектив вы верны всего истине. Стремитесь раскрыть истинные цели любого преступления.<br>\
 		<br>\
-		Secondly, you are loyal to ironhammer and to the commander. Follow the chain of command"
+		Во вторых, вы верны Железному Молоту и командору, а следовательно, и всей цепочке командования"
 
 /obj/landmark/join/start/inspector
 	name = "Ironhammer Inspector"
@@ -196,19 +196,19 @@
 							 /datum/computer_file/program/chem_catalog,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "You are a highly trained specialist within Ironhammer. You were probably a medical student or inexperienced doctor when you joined Ironhammer, and you thusly have a combination of medical and military training. You are not quite as knowledgeable as a civilian career doctor, not quite as much of a fighter as a dedicated IH operative, but strike a balance inbetween. Balance is the nature of your existence.<br>\
+	description = "Вы высококвалифицированный специалист Железного Молоты. Вероятно, вы были студентом медиком или неопытным врачом, когда поступили в Железный Молот, и поэтому у вас есть сочетание медицинской и военной подготовки. Вы не так хорошо осведомлены, как гражданский карьерный врач, вы не настолько подготовленный боей, как преданный оперативник ЖМ, но у вас есть баланс между этими качествами. Равновесие это природа вашего существования.<br>\
 	<br>\
-	Within Ironhammer, you have three roles to undertake. All of your roles can be delegated to others when needed - Moebius Medical for roles 1 and 2, the Ironhammer Inspector for role 3. But you are often the best positioned to carry out these tasks, especially when time is short<br>\
+	В Железном молоте, у вас есть три роли, которые вы должны выполнять. Все ваши роли могут быть делегированы другим, когда это необходимо \"Мебиус Медикал\" для ролей 1 и 2, инспектор ЖМ для роли 3. Но вы часто находитесь в наилучшем положении для выполнения этих задач, особенно когда времени мало<br>\
 	<br>\
-	1. Field Medic. <br>\
-	You may be expected to serve on the backlines in a combat situation, treating and stabilising the wounded, making the call as to whether they can return to combat or leave by medivac. You may need to perform emergency trauma surgery in undesireable conditions. <br>\
-	You are allowed to be armed, but remember that saving lives, not taking them, is your first duty. Don't be afraid to send patients to moebius medical for proper specialist care.<br>\
+	1. Полевой Врач. <br>\
+	От вас ожидают, что вы будете служить в тылу боевой обстановки, лечить и стабилизировать раненых, делая вывод относительно того, могут ли они вернуться в бой или быть госпитализированы. Возможно, вам придется провести экстренную травматологическую операцию в нежелательных условиях. <br>\
+	Вы можете быть вооружены, но помните, что вы должны спасать жизни, а не отнимать их, и это ваша гланая обязанность. Не бойтесь отправлять пациентов в медпункт Мебиуса для получения надлежащей специализированной помощи.<br>\
 	<br>\
-	2. Prison Doctor.<br>\
-	During quiet times, when inmates are serving in the brig, you will often be required to treat prisoners, criminal suspects, and the condemned. Suicide attempts are common in prison, and you will often be treating a patient against their will, who is attempting to escape. When serving in this role, stay on guard, work closely with the gunnery sergeant, and keep control of the situation<br>\
+	2. Тюремный врач.<br>\
+	В спокойное время, когда заключенные отбывают наказание на гауптвахте, вам часто придется лечить заключенных, подозреваемых в преступлениях и осужденных. Попытки самоубийства часто встречаются в тюрьме, и вы часто будете лечить пациента против его воли, который пытается сбежать. Когда вы служите в этой роли, оставайтесь начеку, тесно сотрудничайте с командором-сержантом и держите ситуацию под контролем<br>\
 	<br>\
-	3. Forensic Specialist.<br>\
-	Solving crimes often requires scientific analysis, and expert rulings from a trusted source within Ironhammer. You will often be expected to analyze blood, chemicals and fingerprints, conduct autopsies, and submit your findings to help track down elusive culprits. In this task, you will work closely with the inspector, and if necessary, he often has the talents to perform these tasks. But his time is better spent questioning and interrogating people"
+	3. Судмедэксперт.<br>\
+	Раскрытие преступлений часто требует научного анализа и экспертных заключений из надежного источника в Железном Молоте. От вас часто будут ожидать анализ крови, химических веществ и отпечатков пальцев, проведения вскрытий и представления своих результатов, чтобы помочь выследить неуловимых преступников. В этой роли вы будете тесно сотрудничать с инспектором, и при необходимости он часто будет обладаеть теми талантами, которые нужны для выполнения этих заданий. Но его время лучше потратить на расспросы и допросы людей"
 
 /obj/landmark/join/start/medspec
 	name = "Ironhammer Medical Specialist"
@@ -247,27 +247,27 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "You are the boots on the ground, the rifle in the window, the long arm of the law. You are the hand of ironhammer, and the frontline against criminals, terrorists, and xenos.<br>\
+	description = "Вы оперативник, длинная рука закона отдела Железного молота, и первая линия фронта против преступников, террористов и ксеносов.<br>\
 	<br>\
-	You are a professional soldier and a hardened mercenary, no stranger to violence. You are required to employ your talents in order to bring an end to threats and conflict situations. As a consummate professional, you're often expected to put your pride aside, and work with others. Tactics and teamwork are vital.<br>\
+	Вы профессиональный солдат и закаленный наемник, не чуждый насилия. Вы должны использовать свои таланты, чтобы положить конец угрозам и конфликтным ситуациям. Как непревзойденный профессионал, вы должны отбросить свою гордость и работать с другими. Тактика и командная работа жизненно важны.<br>\
 	<br>\
-	You are paid to act, not to think. When in doubt, follow orders, and leave the hard choices to someone else. Trust in your chain of command. Remember that you are the lowest rank in ironhammer, and you report to everyone else in your organisation. Inspector, medspec, gunnery sergeant and commander, are all your superior officers, their orders should be obeyed.<br>\
+	Вам платят за то, чтобы вы действовали, а не думали. Если вы сомневаетесь, следуйте приказам и предоставьте трудный выбор кому-то другому. Доверьтесь своей субординации. Помните, что вы занимаете самый низкий ранг в Железном Молоте и подчиняетесь всем остальным членам вашей организации. Инспектор, мед. специалист, командор-сержант и командо все ваши старшие офицеры, их приказы должны быть выполнены.<br>\
 	<br>\
-	When there are no standing orders, your ongoing task is to patrol the ship and be on the lookout for threats. Check in at departments, ask if there are any concerns, break up fights and do your best to prevent trouble before it spirals out of control. Wipe out roaches and other dangerous creatures wherever you encounter them.<br>\
+	Когда у вас нет постоянных приказов, ваша задача состоит в том, чтобы патрулировать корабль и быть начеку в поисках угроз. Проверяйте отделы, спрашивайте их, есть ли у них какие-либо проблемы, заканчивайте драки и сделайте все возможное, чтобы предотвратить неприятности, прежде чем они выйдут из-под контроля. Уничтожайте тараканов и других опасных существ, где бы вы их ни встретили.<br>\
 	<br>\
-	You have almost-total access to the ship in order to carry out your duties and reach threats quickly. Do not abuse this. It does not mean you can walk into anywhere you like, many areas are full of sensitive machinery and entering unnanounced can be harmful to your health. Do not steal from departments either. If it's not in the ironhammer wing, it doesn't belong to you. Stealing from the Guild is a good way to get shot in the back"
+	У вас есть почти полный доступ к кораблю, чтобы выполнить свои обязанности и быстро добраться до угроз. Не злоупотребляйте этим. Это не означает, что вы можете войти в любое место, которое вам приглянулось, многие области полны чувствительных механизмов, и вход без предупреждения может быть вреден для вашего здоровья. Не воруйте из других отделов. Если этого нет в отделе Железного Молота, значит, оно тебе не принадлежит. Кража у Гильдии это хороший способ получить пулю в спину"
 
-	duties = "		Patrol the ship, provide a security presence, and look for trouble<br>\
-		Subdue and arrest criminals, terrorists, and other threats<br>\
-		Exterminate monsters, giant vermin and hostile xenos<br>\
-		Follow orders from the chain of command<br>\
-		Obey the law. You are not above it"
+	duties = "		Патрулируйте корабль, обеспечьте безопасность и ищите источники неприятностей<br>\
+		Подавляйте и арестовывайте преступников, террористов и другие источники угрозы<br>\
+		Уничтожайте монстров, гигантских паразитов и враждебных ксеносов<br>\
+		Выполняйте приказы командования<br>\
+		Подчиняйтесь закону. Вы не выше этого."
 
-	loyalties = "		As a soldier, your first loyalty is to the chain of command, which ends with the Ironhammer Commander. Their orders are supreme over all, even if they're currently leading a mutiny against the captain.<br>\
+	loyalties = "		Как солдат, во первых вы верны цепочке командования, которая заканчивается командором Железного Молота. Его приказы превыше всего, даже если они сейчас возглавляют мятеж против капитана.<br>\
 		<br>\
-		Your second loyalty is to your fellow ironhammer brothers in arms. As long as the company takes care of you, you should follow orders. But if you start being sent on suicide missions and treated as expendable fodder, that should change.<br>\
+		Во вторых вы верны вашим коллегам Железного Молота, вашим братьям по оружию. Пока компания заботится о вас, вы должны выполнять приказы. Но если вас начнут отправлять на самоубийственные миссии и рассматривать как расходный материал, вы должны что-то сделать.<br>\
 		<br>\
-		Your third loyalty is to humanity. You are still human under all that armour. If you're being ordered to slaughter civilians en masse, it may be time to start thinking for yourself."
+		В третьих вы верны человечеству. Вы все еще человек под всеми этими доспехами. Если вам приказано массово убивать мирных жителей, возможно, пришло время начать думать самостоятельно."
 
 /obj/landmark/join/start/ihoper
 	name = "Ironhammer Operative"

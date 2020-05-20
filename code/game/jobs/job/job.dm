@@ -174,7 +174,7 @@
 		return TRUE
 
 	if(minimum_character_age && (prefs.age < minimum_character_age))
-		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age].</span>")
+		to_chat(feedback, "<span class='boldannounce'>Минимальный возраст персонажа [minimum_character_age].</span>")
 		return TRUE
 
 	return FALSE
