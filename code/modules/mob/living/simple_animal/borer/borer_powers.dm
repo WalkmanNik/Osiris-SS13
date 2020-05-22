@@ -73,7 +73,7 @@
 			to_chat(src, SPAN_WARNING("\The [H] does not seem to have an ear canal to breach."))
 			return
 
-		if(H.check_head_coverage() && !(H.head.canremove))
+		if(H.check_head_coverage() && H.head &&!(H.head.canremove))
 			to_chat(src, SPAN_WARNING("You cannot get through that host's protective gear."))
 			return
 
@@ -96,7 +96,6 @@
 	// Borer gets host abilities before actually getting inside the host
 	// Workaround for a BYOND bug: http://www.byond.com/forum/post/1833666
 	update_abilities(force_host=TRUE)
-
 	if(!do_mob(src, M, infestation_delay))
 		to_chat(src, SPAN_DANGER("As [M] moves away, you are dislodged and fall to the ground."))
 		update_abilities()
@@ -118,7 +117,6 @@
 	host = M
 	host.status_flags |= PASSEMOTES
 	forceMove(host)
-
 	//Update their traitor status.
 	/*if(host.mind && src.mind)
 		var/list/L = get_player_antags(src.mind, ROLE_BORER)
@@ -180,7 +178,6 @@
 
 	H.verbs |= /mob/living/carbon/human/proc/commune
 	H.verbs |= /mob/living/carbon/human/proc/psychic_whisper
-	H.verbs |= /mob/living/carbon/human/proc/tackle
 	H.verbs |= /mob/living/carbon/proc/spawn_larvae
 	H.verbs |= /mob/living/carbon/proc/talk_host
 
@@ -381,11 +378,13 @@
 		to_chat(src, SPAN_WARNING("You don't have enough chemicals!"))
 		return
 
-	visible_message(SPAN_WARNING("With a hideous, rattling moan, [src] shudders back to life!"))
-
 	if(host.getBrainLoss() >= 100)
 		to_chat(src, SPAN_WARNING("Host is brain dead!"))
 		return
+
+	visible_message(SPAN_WARNING("With a hideous, rattling moan, [src] shudders back to life!"))
+
+
 	var/all_damage = host.getBruteLoss() + host.getFireLoss() + host.getCloneLoss() + host.getOxyLoss() + host.getToxLoss()
 	while(all_damage > 90)
 		host.adjustBruteLoss(-10)
@@ -424,12 +423,13 @@
 		return
 
 	var/list/copied_stats = list()
-	for(var/stat_name in ALL_STATS)
-		var/host_stat = host.stats.getStat(stat_name, pure=TRUE)
-		var/borer_stat = stats.getStat(stat_name, pure=TRUE)
-		if(host_stat > borer_stat)
-			stats.setStat(stat_name, host_stat)
-			copied_stats += stat_name
+	if(!host.stats)                       //Анти-рантайм проверка
+		for(var/stat_name in ALL_STATS)
+			var/host_stat = host.stats.getStat(stat_name, pure=TRUE)
+			var/borer_stat = stats.getStat(stat_name, pure=TRUE)
+			if(host_stat > borer_stat)
+				stats.setStat(stat_name, host_stat)
+				copied_stats += stat_name
 
 	var/list/copied_languages = list()
 	for(var/datum/language/L in host.languages)

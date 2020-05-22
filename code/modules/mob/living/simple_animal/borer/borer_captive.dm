@@ -2,6 +2,7 @@
 	name = "host brain"
 	real_name = "host brain"
 	universal_understand = 1
+	stat = 0
 
 /mob/living/captive_brain/say(var/message)
 
@@ -52,7 +53,6 @@
 			B.detatch()
 			verbs |= /mob/living/carbon/human/proc/commune
 			verbs |= /mob/living/carbon/human/proc/psychic_whisper
-			verbs |= /mob/living/carbon/human/proc/tackle
 			verbs |= /mob/living/carbon/proc/spawn_larvae
 
 		return
