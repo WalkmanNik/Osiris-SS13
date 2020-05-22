@@ -8,7 +8,8 @@
 	taste_description = "slimey metal"
 	reagent_state = SOLID
 	color = "#696969" // ( ͡° ͜ʖ ͡°)
-	metabolism = 0
+	metabolism = REM
+	infinitity = 1
 	heating_point = 523
 	heating_products = list("nanites")
 	scannable = 1

@@ -12,11 +12,12 @@
 
 		B.detatch()
 
-		verbs |= /mob/living/carbon/human/proc/commune
-		verbs |= /mob/living/carbon/human/proc/psychic_whisper
-		verbs |= /mob/living/carbon/human/proc/tackle
-		verbs |= /mob/living/carbon/proc/spawn_larvae
-		verbs |= /mob/living/carbon/proc/talk_host
+		if(ishuman(src))
+			verbs -= /mob/living/carbon/human/proc/commune
+			verbs -= /mob/living/carbon/human/proc/psychic_whisper
+		verbs -= /mob/living/carbon/proc/spawn_larvae
+		verbs -= /mob/living/carbon/proc/talk_host
+		verbs -= /mob/living/carbon/proc/release_control
 	else
 		to_chat(src, "\red <B>ERROR NO BORER OR BRAINMOB DETECTED IN THIS MOB, THIS IS A BUG !</B>")
 
