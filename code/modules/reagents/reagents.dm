@@ -42,7 +42,7 @@
 	var/chilling_message = "crackles and freezes!"
 	var/chilling_sound = 'sound/effects/bubbles.ogg'
 	var/list/chilling_products
-
+	var/infinitity = 0 //If it cannot be romoved by metabolism
 	var/heating_point
 	var/heating_message = "begins to boil!"
 	var/heating_sound = 'sound/effects/bubbles.ogg'
@@ -143,7 +143,7 @@
 			if(CHEM_TOUCH)
 				affect_touch(M, alien, RTM(removed, location))
 	// At this point, the reagent might have removed itself entirely - safety check
-	if(volume && holder)
+	if(volume && holder && !infinitity)
 		remove_self(removed)
 
 /datum/reagent/proc/affect_blood(var/mob/living/carbon/M, var/alien, var/effect_multiplier)
