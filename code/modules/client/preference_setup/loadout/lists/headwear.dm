@@ -140,3 +140,13 @@
 	display_name = "Type-34C Semi-Enclosed Headwear"
 	path = /obj/item/clothing/head/armor/helmet/visor/cyberpunkgoggle
 	cost = 2
+
+/datum/gear/head/bunny
+    display_name = "Bunny Ears"
+    path = /obj/item/clothing/head/collectable/rabbitears
+    cost = 1
+
+/datum/gear/head/kitty
+    display_name = "Kitty Ears"
+    path = /obj/item/clothing/head/collectable/kitty
+    cost = 1
